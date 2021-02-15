@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
@@ -6,10 +7,10 @@ using UnityEngine.AI;
 public class AIMovementBattle : MonoBehaviour
 {
     [SerializeField]
-    GameObject target;
+    public GameObject target;
     [SerializeField]
     GameObject player;
-    NavMeshAgent navMeshAgent;
+    [NonSerialized] public NavMeshAgent navMeshAgent;
     public bool isRetreating = false;
     [SerializeField]
     float radiusInBattle = 1f;
