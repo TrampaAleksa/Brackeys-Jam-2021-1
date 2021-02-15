@@ -11,20 +11,18 @@ public class AIMovementBattle : MonoBehaviour
     GameObject player;
     NavMeshAgent navMeshAgent;
     public bool isRetreating = false;
+    [SerializeField]
+    float radiusInBattle = 1f;
     GameObject lookAt;
     // Start is called before the first frame update
     void Start()
     {
-        // ako se ne krece koristi look at
-        //transform.LookAt(target.transform);
-        navMeshAgent = GetComponent<NavMeshAgent>();
+        navMeshAgent = GetComponent<NavMeshAgent>();     
     }
 
     // Update is called once per frame
     void Update()
     {
-      
-        //retreat
         if (!isRetreating)
         {
             navMeshAgent.SetDestination(target.transform.transform.position);
@@ -43,6 +41,7 @@ public class AIMovementBattle : MonoBehaviour
             isRetreating = false;
          if (navMeshAgent.remainingDistance <= navMeshAgent.stoppingDistance)
             transform.LookAt(lookAt.transform);
+        navMeshAgent.radius = radiusInBattle;
     }
 
 }

@@ -137,6 +137,7 @@ GameObject:
   - component: {fileID: 13201918}
   - component: {fileID: 13201917}
   - component: {fileID: 13201916}
+  - component: {fileID: 13201922}
   m_Layer: 0
   m_Name: Sphere (6)
   m_TagString: Ally
@@ -151,14 +152,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 13201915}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: faf8ca35ac055f445bc804ed707c0bdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 1216183596}
+  target: {fileID: 1245095983}
   player: {fileID: 764076719}
   isRetreating: 0
+  radiusInBattle: 1
 --- !u!195 &13201917
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -168,7 +170,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 13201915}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 1.5
+  m_Radius: 1
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
@@ -255,8 +257,22 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &13201922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 13201915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60654dbe576f682469ad3d9598b34cc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 764076719}
+  radiusOutOfBattle: 1
 --- !u!1 &380468283
 GameObject:
   m_ObjectHideFlags: 0
@@ -740,6 +756,7 @@ GameObject:
   - component: {fileID: 764076723}
   - component: {fileID: 764076722}
   - component: {fileID: 764076724}
+  - component: {fileID: 764076725}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -814,9 +831,21 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 764076719}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 38819a75adb195343ae6502f52a34093, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &764076725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 764076719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb43830d82038ef43bc5a301d11ea304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &802098461
@@ -996,7 +1025,7 @@ GameObject:
   - component: {fileID: 905418116}
   - component: {fileID: 905418115}
   m_Layer: 0
-  m_Name: Capsule
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1175,6 +1204,7 @@ GameObject:
   - component: {fileID: 1051230547}
   - component: {fileID: 1051230546}
   - component: {fileID: 1051230545}
+  - component: {fileID: 1051230551}
   m_Layer: 0
   m_Name: Sphere (5)
   m_TagString: Ally
@@ -1189,14 +1219,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1051230544}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: faf8ca35ac055f445bc804ed707c0bdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 1216183596}
+  target: {fileID: 1245095983}
   player: {fileID: 764076719}
   isRetreating: 0
+  radiusInBattle: 1
 --- !u!195 &1051230546
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1206,7 +1237,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 1051230544}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 1.5
+  m_Radius: 1
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
@@ -1293,9 +1324,23 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1216183596
+--- !u!114 &1051230551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1051230544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60654dbe576f682469ad3d9598b34cc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 764076719}
+  radiusOutOfBattle: 1
+--- !u!1 &1245095983
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1303,24 +1348,26 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1216183600}
-  - component: {fileID: 1216183599}
-  - component: {fileID: 1216183598}
-  - component: {fileID: 1216183597}
+  - component: {fileID: 1245095987}
+  - component: {fileID: 1245095986}
+  - component: {fileID: 1245095985}
+  - component: {fileID: 1245095984}
+  - component: {fileID: 1245095988}
+  - component: {fileID: 1245095989}
   m_Layer: 0
-  m_Name: Capsule
+  m_Name: Target
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!136 &1216183597
+--- !u!136 &1245095984
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1216183596}
+  m_GameObject: {fileID: 1245095983}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
@@ -1328,13 +1375,13 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &1216183598
+--- !u!23 &1245095985
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1216183596}
+  m_GameObject: {fileID: 1245095983}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -1369,28 +1416,63 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &1216183599
+--- !u!33 &1245095986
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1216183596}
+  m_GameObject: {fileID: 1245095983}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &1216183600
+--- !u!4 &1245095987
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1216183596}
+  m_GameObject: {fileID: 1245095983}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -23.58, y: 0.56, z: 2.1562083}
+  m_LocalPosition: {x: -36.3, y: -0.11, z: 1.98}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!195 &1245095988
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1245095983}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 2
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 0
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 1
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!114 &1245095989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1245095983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec462855f4426c346bec7231b6939262, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetAlly: {fileID: 1451716264}
 --- !u!1 &1360252245
 GameObject:
   m_ObjectHideFlags: 3
@@ -1605,6 +1687,7 @@ GameObject:
   - component: {fileID: 1424595972}
   - component: {fileID: 1424595976}
   - component: {fileID: 1424595977}
+  - component: {fileID: 1424595978}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Ally
@@ -1686,7 +1769,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!195 &1424595976
 NavMeshAgent:
@@ -1697,7 +1780,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 1424595971}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
+  m_Radius: 1
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
@@ -1717,14 +1800,29 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1424595971}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: faf8ca35ac055f445bc804ed707c0bdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 1216183596}
+  target: {fileID: 1245095983}
   player: {fileID: 764076719}
   isRetreating: 0
+  radiusInBattle: 1
+--- !u!114 &1424595978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1424595971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60654dbe576f682469ad3d9598b34cc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 764076719}
+  radiusOutOfBattle: 1
 --- !u!1 &1451716264
 GameObject:
   m_ObjectHideFlags: 0
@@ -1739,6 +1837,7 @@ GameObject:
   - component: {fileID: 1451716267}
   - component: {fileID: 1451716266}
   - component: {fileID: 1451716265}
+  - component: {fileID: 1451716271}
   m_Layer: 0
   m_Name: Sphere (3)
   m_TagString: Ally
@@ -1753,14 +1852,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1451716264}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: faf8ca35ac055f445bc804ed707c0bdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 1216183596}
+  target: {fileID: 1245095983}
   player: {fileID: 764076719}
   isRetreating: 0
+  radiusInBattle: 1
 --- !u!195 &1451716266
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1775,9 +1875,9 @@ NavMeshAgent:
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 270
-  m_StoppingDistance: 7
+  m_StoppingDistance: 3
   m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
+  m_AutoBraking: 0
   m_AutoRepath: 1
   m_Height: 1
   m_BaseOffset: 0.5
@@ -1857,8 +1957,22 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1451716271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1451716264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60654dbe576f682469ad3d9598b34cc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 764076719}
+  radiusOutOfBattle: 1
 --- !u!1 &1631627878
 GameObject:
   m_ObjectHideFlags: 3
@@ -1999,6 +2113,7 @@ GameObject:
   - component: {fileID: 1647384027}
   - component: {fileID: 1647384031}
   - component: {fileID: 1647384032}
+  - component: {fileID: 1647384033}
   m_Layer: 0
   m_Name: Sphere (1)
   m_TagString: Ally
@@ -2080,7 +2195,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!195 &1647384031
 NavMeshAgent:
@@ -2091,7 +2206,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 1647384026}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 1.5
+  m_Radius: 1
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
@@ -2111,14 +2226,29 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1647384026}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: faf8ca35ac055f445bc804ed707c0bdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 1216183596}
+  target: {fileID: 1245095983}
   player: {fileID: 764076719}
   isRetreating: 0
+  radiusInBattle: 1
+--- !u!114 &1647384033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1647384026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60654dbe576f682469ad3d9598b34cc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 764076719}
+  radiusOutOfBattle: 1
 --- !u!1 &1781428527
 GameObject:
   m_ObjectHideFlags: 0
@@ -2133,6 +2263,7 @@ GameObject:
   - component: {fileID: 1781428530}
   - component: {fileID: 1781428529}
   - component: {fileID: 1781428528}
+  - component: {fileID: 1781428534}
   m_Layer: 0
   m_Name: Sphere (4)
   m_TagString: Ally
@@ -2147,14 +2278,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1781428527}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: faf8ca35ac055f445bc804ed707c0bdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 1216183596}
+  target: {fileID: 1245095983}
   player: {fileID: 764076719}
   isRetreating: 0
+  radiusInBattle: 1
 --- !u!195 &1781428529
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -2169,9 +2301,9 @@ NavMeshAgent:
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 270
-  m_StoppingDistance: 7
+  m_StoppingDistance: 3
   m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
+  m_AutoBraking: 0
   m_AutoRepath: 1
   m_Height: 1
   m_BaseOffset: 0.5
@@ -2247,12 +2379,26 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1781428527}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -17.34, y: 0.44, z: 1.99}
+  m_LocalPosition: {x: -17.28, y: 0.44, z: 1.99}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1781428534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1781428527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60654dbe576f682469ad3d9598b34cc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 764076719}
+  radiusOutOfBattle: 1
 --- !u!1 &1920328876
 GameObject:
   m_ObjectHideFlags: 0
@@ -2267,6 +2413,7 @@ GameObject:
   - component: {fileID: 1920328879}
   - component: {fileID: 1920328878}
   - component: {fileID: 1920328877}
+  - component: {fileID: 1920328883}
   m_Layer: 0
   m_Name: Sphere (2)
   m_TagString: Ally
@@ -2281,14 +2428,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1920328876}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: faf8ca35ac055f445bc804ed707c0bdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 1216183596}
+  target: {fileID: 1245095983}
   player: {fileID: 764076719}
   isRetreating: 0
+  radiusInBattle: 1
 --- !u!195 &1920328878
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -2298,7 +2446,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 1920328876}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 1.5
+  m_Radius: 1
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
@@ -2385,7 +2533,116 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1920328883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1920328876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60654dbe576f682469ad3d9598b34cc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 764076719}
+  radiusOutOfBattle: 1
+--- !u!1 &1930868107
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1930868111}
+  - component: {fileID: 1930868110}
+  - component: {fileID: 1930868109}
+  - component: {fileID: 1930868108}
+  m_Layer: 0
+  m_Name: Cube
+  m_TagString: BattleArea
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1930868108
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1930868107}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1930868109
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1930868107}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1930868110
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1930868107}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1930868111
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1930868107}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.21, y: -0.19, z: -27.744375}
+  m_LocalScale: {x: 1, y: 1, z: 100}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2138083686
 GameObject:
