@@ -140,6 +140,8 @@ GameObject:
   - component: {fileID: 13201922}
   - component: {fileID: 13201923}
   - component: {fileID: 13201924}
+  - component: {fileID: 13201925}
+  - component: {fileID: 13201926}
   m_Layer: 0
   m_Name: Sphere (6)
   m_TagString: Ally
@@ -304,6 +306,33 @@ MonoBehaviour:
   baseDamage: 15
   projectileObj: {fileID: 3767566601987113569, guid: e65a0129d8c2c4c4b817c937395d07e9, type: 3}
   projectileSpeed: 2
+--- !u!114 &13201925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 13201915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0524277618e78840863b4ef240013fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHealth: 60
+  maxHealth: 60
+--- !u!114 &13201926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 13201915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5df565d3a1502914bb3491702c761453, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHealth: {fileID: 0}
 --- !u!1 &380468283
 GameObject:
   m_ObjectHideFlags: 0
@@ -1238,6 +1267,8 @@ GameObject:
   - component: {fileID: 1051230551}
   - component: {fileID: 1051230552}
   - component: {fileID: 1051230553}
+  - component: {fileID: 1051230554}
+  - component: {fileID: 1051230555}
   m_Layer: 0
   m_Name: Sphere (5)
   m_TagString: Ally
@@ -1402,6 +1433,84 @@ MonoBehaviour:
   baseDamage: 15
   projectileObj: {fileID: 3767566601987113569, guid: e65a0129d8c2c4c4b817c937395d07e9, type: 3}
   projectileSpeed: 2
+--- !u!114 &1051230554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1051230544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0524277618e78840863b4ef240013fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHealth: 60
+  maxHealth: 60
+--- !u!114 &1051230555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1051230544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5df565d3a1502914bb3491702c761453, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHealth: {fileID: 0}
+--- !u!1 &1154437271
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1154437273}
+  - component: {fileID: 1154437272}
+  m_Layer: 0
+  m_Name: Ally list
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1154437272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1154437271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c6bfb284fb2470cad2a52be4af23954, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allies:
+  - {fileID: 1424595982}
+  - {fileID: 1647384037}
+  - {fileID: 1920328887}
+  - {fileID: 1451716275}
+  - {fileID: 1781428538}
+  - {fileID: 1051230555}
+  - {fileID: 13201926}
+--- !u!4 &1154437273
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1154437271}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -23.276281, y: -0.14083481, z: -2.8752375}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1245095983
 GameObject:
   m_ObjectHideFlags: 0
@@ -1419,6 +1528,8 @@ GameObject:
   - component: {fileID: 1245095991}
   - component: {fileID: 1245095990}
   - component: {fileID: 1245095992}
+  - component: {fileID: 1245095993}
+  - component: {fileID: 1245095994}
   m_Layer: 0
   m_Name: Target
   m_TagString: Untagged
@@ -1580,6 +1691,33 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1245095993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1245095983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 649fd21fdf5a4904a6df387ba626970f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 1
+  baseDamage: 50
+--- !u!114 &1245095994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1245095983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0af346a43a54b019d4c22a68efd3743, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeBetweenAttacks: 3
 --- !u!1 &1360252245
 GameObject:
   m_ObjectHideFlags: 3
@@ -1797,6 +1935,8 @@ GameObject:
   - component: {fileID: 1424595978}
   - component: {fileID: 1424595979}
   - component: {fileID: 1424595980}
+  - component: {fileID: 1424595981}
+  - component: {fileID: 1424595982}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Ally
@@ -1961,6 +2101,33 @@ MonoBehaviour:
   baseDamage: 15
   projectileObj: {fileID: 3767566601987113569, guid: e65a0129d8c2c4c4b817c937395d07e9, type: 3}
   projectileSpeed: 2
+--- !u!114 &1424595981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1424595971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0524277618e78840863b4ef240013fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHealth: 60
+  maxHealth: 60
+--- !u!114 &1424595982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1424595971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5df565d3a1502914bb3491702c761453, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHealth: {fileID: 0}
 --- !u!1 &1451716264
 GameObject:
   m_ObjectHideFlags: 0
@@ -1978,6 +2145,8 @@ GameObject:
   - component: {fileID: 1451716271}
   - component: {fileID: 1451716272}
   - component: {fileID: 1451716273}
+  - component: {fileID: 1451716274}
+  - component: {fileID: 1451716275}
   m_Layer: 0
   m_Name: Sphere (3)
   m_TagString: Ally
@@ -2142,6 +2311,33 @@ MonoBehaviour:
   baseDamage: 15
   projectileObj: {fileID: 3767566601987113569, guid: e65a0129d8c2c4c4b817c937395d07e9, type: 3}
   projectileSpeed: 2
+--- !u!114 &1451716274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1451716264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0524277618e78840863b4ef240013fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHealth: 60
+  maxHealth: 60
+--- !u!114 &1451716275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1451716264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5df565d3a1502914bb3491702c761453, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHealth: {fileID: 0}
 --- !u!1 &1631627878
 GameObject:
   m_ObjectHideFlags: 3
@@ -2285,6 +2481,8 @@ GameObject:
   - component: {fileID: 1647384033}
   - component: {fileID: 1647384034}
   - component: {fileID: 1647384035}
+  - component: {fileID: 1647384036}
+  - component: {fileID: 1647384037}
   m_Layer: 0
   m_Name: Sphere (1)
   m_TagString: Ally
@@ -2449,6 +2647,33 @@ MonoBehaviour:
   baseDamage: 15
   projectileObj: {fileID: 3767566601987113569, guid: e65a0129d8c2c4c4b817c937395d07e9, type: 3}
   projectileSpeed: 2
+--- !u!114 &1647384036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1647384026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0524277618e78840863b4ef240013fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHealth: 60
+  maxHealth: 60
+--- !u!114 &1647384037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1647384026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5df565d3a1502914bb3491702c761453, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHealth: {fileID: 0}
 --- !u!1 &1781428527
 GameObject:
   m_ObjectHideFlags: 0
@@ -2466,6 +2691,8 @@ GameObject:
   - component: {fileID: 1781428534}
   - component: {fileID: 1781428535}
   - component: {fileID: 1781428536}
+  - component: {fileID: 1781428537}
+  - component: {fileID: 1781428538}
   m_Layer: 0
   m_Name: Sphere (4)
   m_TagString: Ally
@@ -2630,6 +2857,33 @@ MonoBehaviour:
   baseDamage: 15
   projectileObj: {fileID: 3767566601987113569, guid: e65a0129d8c2c4c4b817c937395d07e9, type: 3}
   projectileSpeed: 2
+--- !u!114 &1781428537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1781428527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0524277618e78840863b4ef240013fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHealth: 60
+  maxHealth: 60
+--- !u!114 &1781428538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1781428527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5df565d3a1502914bb3491702c761453, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHealth: {fileID: 0}
 --- !u!1 &1920328876
 GameObject:
   m_ObjectHideFlags: 0
@@ -2647,6 +2901,8 @@ GameObject:
   - component: {fileID: 1920328883}
   - component: {fileID: 1920328884}
   - component: {fileID: 1920328885}
+  - component: {fileID: 1920328886}
+  - component: {fileID: 1920328887}
   m_Layer: 0
   m_Name: Sphere (2)
   m_TagString: Ally
@@ -2811,6 +3067,33 @@ MonoBehaviour:
   baseDamage: 15
   projectileObj: {fileID: 3767566601987113569, guid: e65a0129d8c2c4c4b817c937395d07e9, type: 3}
   projectileSpeed: 2
+--- !u!114 &1920328886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1920328876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0524277618e78840863b4ef240013fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHealth: 60
+  maxHealth: 60
+--- !u!114 &1920328887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1920328876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5df565d3a1502914bb3491702c761453, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHealth: {fileID: 0}
 --- !u!1 &1930868107
 GameObject:
   m_ObjectHideFlags: 0
