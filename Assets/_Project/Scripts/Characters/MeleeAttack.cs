@@ -5,11 +5,8 @@ public class MeleeAttack : Attack
 {
     public override void LaunchAttack(Transform target)
     {
-        base.LaunchAttack(target);
-        if (target.CompareTag("Player") || target.CompareTag("Character"))
-        {
+            base.LaunchAttack(target);
             print("Launching melee attack!");
             target.GetComponent<AttackHitDetector>().HitByAttack(type, baseDamage);
-        }
     }
 }
