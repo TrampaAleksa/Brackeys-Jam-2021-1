@@ -9,12 +9,20 @@ public class Health : MonoBehaviour
 
     public virtual void TakeDamage(float damageAmount)
     {
-        
+        currentHealth -= damageAmount;
+
+        if (currentHealth <= 0 )
+        {
+            currentHealth = 0;
+            print(gameObject.name + " Died!");
+        }
     }
 
     public virtual void Heal(float healAmount)
     {
-        
+        currentHealth += healAmount;
+
+        if (currentHealth >= maxHealth) currentHealth = maxHealth;
     }
 }
 
