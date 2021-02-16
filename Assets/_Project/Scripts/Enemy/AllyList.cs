@@ -42,9 +42,8 @@ public class AllyList : MonoBehaviour
     {
         for (int i = 0; i < allies.Count; i++)
         {
-            allies[i].aiMovementBattle.target = boss.gameObject;
-            allies[i].aiMovementBattle.enabled = true;
-            allies[i].aiMovement.enabled = false;
+            allies[i].movement.target = boss.gameObject;
+            allies[i].movement.state = AllyMovementState.InBattle;
         }
     }
 
@@ -52,9 +51,8 @@ public class AllyList : MonoBehaviour
     {
         for (int i = 0; i < allies.Count; i++)
         {
-            allies[i].aiMovementBattle.target = _player.gameObject;
-            allies[i].aiMovementBattle.enabled = false;
-            allies[i].aiMovement.enabled = true;
+            allies[i].movement.target = _player.gameObject;
+            allies[i].movement.state = AllyMovementState.OutOfBattle;
         }
     }
 }

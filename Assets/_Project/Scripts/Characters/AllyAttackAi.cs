@@ -9,19 +9,19 @@ public class AllyAttackAi : MonoBehaviour
 
     private void Update()
     {
-        if (!ally.aiMovementBattle.enabled) return;
+        if (ally.movement.state != AllyMovementState.InBattle) return;
         
         TryAttacking();
     }
 
     private void TryAttacking()
     {
-        if (!ally.aiMovementBattle.InAttackRange()) return;
+        if (!ally.movement.InAttackRange) return;
         
         if (attackInCooldown) return;
 
         attackInCooldown = true;
-        ally.attack.LaunchAttack(ally.aiMovementBattle.target.transform);
+        ally.attack.LaunchAttack(ally.movement.target.transform);
         gameObject.AddComponent<TimedAction>().StartTimedAction(FinishAttack, timeBetweenAttacks);
     }
 

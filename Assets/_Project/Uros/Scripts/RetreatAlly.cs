@@ -22,8 +22,8 @@ public class RetreatAlly : MonoBehaviour
                 if (hit.collider.gameObject.CompareTag("Ally"))
                 {
                     ally = hit.collider.GetComponent<Ally>();
-                    ally.aiMovementBattle.isRetreating = true;
-                    Debug.Log("Did Hit");
+                    ally.movement.state = AllyMovementState.Retreating;
+                    print("Did Hit");
                 }
             }
         }

@@ -7,9 +7,9 @@ public class Ally : MonoBehaviour
     [NonSerialized]public Attack attack;
     [NonSerialized]public Health health;
     [NonSerialized]public AttackHitDetector hitDetector;
-    [NonSerialized]public AIMovementBattle aiMovementBattle;
-    [NonSerialized]public AIMovement aiMovement;
     [NonSerialized]public NavMeshAgent navMeshAgent;
+
+    [NonSerialized]public AllyMovement movement;
 
     private AllyAttackAi _allyAttackAi;
 
@@ -20,13 +20,10 @@ public class Ally : MonoBehaviour
         hitDetector = GetComponentInChildren<AttackHitDetector>();
         
         navMeshAgent = GetComponent<NavMeshAgent>();
-        aiMovementBattle = GetComponentInChildren<AIMovementBattle>();
-        aiMovement = GetComponentInChildren<AIMovement>();
-
+        movement = GetComponentInChildren<AllyMovement>();
         _allyAttackAi = GetComponentInChildren<AllyAttackAi>();
-
-        aiMovementBattle.ally = this;
-        aiMovement.ally = this;
+        
         _allyAttackAi.ally = this;
+        movement.ally = this;
     }
 }
