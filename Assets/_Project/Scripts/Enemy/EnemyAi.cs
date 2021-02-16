@@ -58,6 +58,8 @@ public class EnemyAi : MonoBehaviour
         var inAttackRange = navMeshAgent.remainingDistance < navMeshAgent.stoppingDistance && navMeshAgent.remainingDistance > 0.0005f;
         if (!inAttackRange) return;
 
+        transform.LookAt(new Vector3(currentTarget.position.x, transform.position.y, currentTarget.position.z));
+        
         if (attackInCooldown) return;
 
         attackInCooldown = true;
