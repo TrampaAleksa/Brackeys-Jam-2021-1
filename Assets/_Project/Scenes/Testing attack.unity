@@ -1309,6 +1309,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   baseDamage: 50
+  spikeObj: {fileID: 9190190045878889830, guid: 086b03c364f82034ab28f0946a0613a4, type: 3}
+  numberOfSpikes: 0
+  rangeBetweenSpikes: 0
 --- !u!114 &1245095990
 MonoBehaviour:
   m_ObjectHideFlags: 0
