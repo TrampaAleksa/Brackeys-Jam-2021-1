@@ -34,4 +34,15 @@ public class AllyList : MonoBehaviour
 
         return alliesOfType;
     }
+
+    public void TriggerAllyCombat(Transform boss)
+    {
+        for (int i = 0; i < allies.Count; i++)
+        {
+            allies[i].aiMovementBattle.target = boss.gameObject;
+            allies[i].aiMovementBattle.enabled = true;
+            allies[i].aiMovement.enabled = false;
+        }
+
+    }
 }
