@@ -13,6 +13,7 @@ public class EnemyAi : MonoBehaviour
     private NavMeshAgent navMeshAgent;
     
     private bool attackInCooldown;
+    private int currentIndex;
 
     void Awake()
     {
@@ -32,8 +33,8 @@ public class EnemyAi : MonoBehaviour
 
     private void TryAttacking()
     {
-        if (allyList.allies.Count != 0 && allyList.currentIndex < allyList.allies.Count)
-            navMeshAgent.SetDestination(allyList.allies[AllyList.Instance.currentIndex].transform.transform.position);
+        if (allyList.allies.Count != 0 && currentIndex < allyList.allies.Count)
+            navMeshAgent.SetDestination(allyList.allies[currentIndex].transform.transform.position);
         else return;
 
         var inAttackRange = navMeshAgent.remainingDistance < navMeshAgent.stoppingDistance;
@@ -49,7 +50,7 @@ public class EnemyAi : MonoBehaviour
             return;
         }
 
-        meleeAttack.LaunchAttack(allyList.allies[AllyList.Instance.currentIndex].transform);
+        meleeAttack.LaunchAttack(allyList.allies[currentIndex].transform);
         gameObject.AddComponent<TimedAction>().StartTimedAction(FinishAttack, timeBetweenAttacks);
     }
 
