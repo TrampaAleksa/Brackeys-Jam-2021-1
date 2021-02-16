@@ -1169,7 +1169,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1245095983
 GameObject:
@@ -1187,10 +1187,10 @@ GameObject:
   - component: {fileID: 1245095991}
   - component: {fileID: 1245095990}
   - component: {fileID: 1245095992}
-  - component: {fileID: 1245095993}
   - component: {fileID: 1245095994}
+  - component: {fileID: 1245095989}
   m_Layer: 0
-  m_Name: Target
+  m_Name: Ice Golem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1295,6 +1295,20 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &1245095989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1245095983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74df56404c51432f9205b9b7cd97a97a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 1
+  baseDamage: 50
 --- !u!114 &1245095990
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1337,20 +1351,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1245095993
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1245095983}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 649fd21fdf5a4904a6df387ba626970f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  type: 1
-  baseDamage: 50
 --- !u!114 &1245095994
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1703,7 +1703,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2054613011753863727, guid: b26a3f50b6d61c641b235962e424dba9, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2054613011753863727, guid: b26a3f50b6d61c641b235962e424dba9, type: 3}
       propertyPath: m_LocalPosition.x

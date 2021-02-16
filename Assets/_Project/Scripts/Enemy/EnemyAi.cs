@@ -9,7 +9,7 @@ public class EnemyAi : MonoBehaviour
     public float timeBetweenAttacks;
 
     private AllyList allyList;
-    private MeleeAttack meleeAttack;
+    private Attack meleeAttack;
     private NavMeshAgent navMeshAgent;
 
     private bool attackInCooldown;
@@ -20,7 +20,7 @@ public class EnemyAi : MonoBehaviour
     void Awake()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
-        meleeAttack = GetComponent<MeleeAttack>();
+        meleeAttack = GetComponent<Attack>();
         _transform = transform;
         AllyList.allyDiedEvent += TargetKilled;
     }
