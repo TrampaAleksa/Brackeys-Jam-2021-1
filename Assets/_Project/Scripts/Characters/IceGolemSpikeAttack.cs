@@ -20,7 +20,7 @@ public class IceGolemSpikeAttack : Attack
 
         for (int i = 0; i < numberOfSpikes; i++)
         {
-            var currentSpawnPosition = _golemTransform.forward * (3f * (i+1)) + _golemTransform.position;
+            var currentSpawnPosition = _golemTransform.forward * (3f * (i+1)) + _golemTransform.position + Vector3.down*0.6f;
             Instantiate(spikeObj, currentSpawnPosition, _golemTransform.rotation);
         }
     }
