@@ -12,22 +12,17 @@ public class AIMovement : MonoBehaviour
     float radiusOutOfBattle = 1.5f;
 
     [NonSerialized] public Ally ally;
-    private NavMeshAgent navMeshAgent;
     
     private void Awake()
     {
         player = player ==null? GameObject.FindWithTag("Player") : player;
     }
-    private void Start()
-    {
-        navMeshAgent = ally == null ? GetComponent<NavMeshAgent>() : ally.navMeshAgent;
-    }
 
     void Update()
     {
-        navMeshAgent.SetDestination(player.transform.position);
-        if (navMeshAgent.remainingDistance <= navMeshAgent.stoppingDistance)
+        ally.navMeshAgent.SetDestination(player.transform.position);
+        if (ally.navMeshAgent.remainingDistance <= ally.navMeshAgent.stoppingDistance)
             transform.LookAt(player.transform);
-        navMeshAgent.radius = radiusOutOfBattle;
+        ally.navMeshAgent.radius = radiusOutOfBattle;
     }
 }

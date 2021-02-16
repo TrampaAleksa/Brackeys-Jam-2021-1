@@ -11,7 +11,6 @@ public class AIMovementBattle : MonoBehaviour
     public bool isRetreating = false;
     [SerializeField] float radiusInBattle = 1f;
     GameObject lookAt;
-    private NavMeshAgent navMeshAgent;
 
     [NonSerialized] public Ally ally;
 
@@ -21,22 +20,16 @@ public class AIMovementBattle : MonoBehaviour
         target = player;
     }
 
-    private void Start()
-    {
-        navMeshAgent = ally == null ? GetComponent<NavMeshAgent>() : ally.navMeshAgent;
-    }
-    
-
     void Update()
     {
         if (!isRetreating)
         {
-            navMeshAgent.SetDestination(target.transform.transform.position);
+            ally.navMeshAgent.SetDestination(target.transform.position);
             lookAt = target;
         }
         else
         {
-            navMeshAgent.SetDestination(player.transform.position);
+            ally.navMeshAgent.SetDestination(player.transform.position);
             lookAt = player;
         }
 
@@ -47,11 +40,11 @@ public class AIMovementBattle : MonoBehaviour
 
         if (Input.GetMouseButtonDown(1))
             isRetreating = false;
-        if (navMeshAgent.remainingDistance <= navMeshAgent.stoppingDistance)
+        if (ally.navMeshAgent.remainingDistance <= ally.navMeshAgent.stoppingDistance)
             transform.LookAt(lookAt.transform);
-        navMeshAgent.radius = radiusInBattle;
+        ally.navMeshAgent.radius = radiusInBattle;
     }
 
 
-    public bool InAttackRange() => navMeshAgent.remainingDistance < navMeshAgent.stoppingDistance;
+    public bool InAttackRange() => ally.navMeshAgent.remainingDistance < ally.navMeshAgent.stoppingDistance;
 }
