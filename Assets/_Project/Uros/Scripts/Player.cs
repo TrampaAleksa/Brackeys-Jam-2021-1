@@ -5,31 +5,27 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     bool inBattle = false;
-    RetreatAlly retreatAlly;
     GameObject[] allies;
-    AIMovementBattle[] aIMovementBattles;
-    int numberOfAllies = 0;
-    GameObject boss;
     // Start is called before the first frame update
     void Start()
     {
-        allies = GameObject.FindGameObjectsWithTag("Ally");
+ 
     }
 
     // Update is called once per frame
     void Update()
     {       
-        ChangeBattleArea();
+
     }
-    void ChangeBattleArea()
+
+    private void OnTriggerEnter(Collider other)
     {
-        if (Input.GetAxis("Jump") != 0)
-        {
+        if (other.CompareTag("BattleArea"))
+        {       
+            allies = GameObject.FindGameObjectsWithTag("Ally");
             inBattle = !inBattle;
-            
             gameObject.GetComponent<RetreatAlly>().enabled = inBattle;
-            
-            for(int i =0; i< allies.Length; i++)
+            for (int i = 0; i < allies.Length; i++)
             {
                 allies[i].GetComponent<AIMovementBattle>().enabled = inBattle;
                 allies[i].GetComponent<AIMovement>().enabled = !inBattle;
@@ -37,19 +33,11 @@ public class Player : MonoBehaviour
             
         }
     }
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("BattleArea"))
         {
-            inBattle = !inBattle;
-
-            gameObject.GetComponent<RetreatAlly>().enabled = inBattle;
-
-            for (int i = 0; i < allies.Length; i++)
-            {
-                allies[i].GetComponent<AIMovementBattle>().enabled = inBattle;
-                allies[i].GetComponent<AIMovement>().enabled = !inBattle;
-            }
+            other.gameObject.GetComponent<BoxCollider>().isTrigger = false;
         }
     }
 }
