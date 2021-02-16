@@ -25,6 +25,7 @@ public class AllyList : MonoBehaviour
     {
         allies.Remove(ally);
         allyDiedEvent?.Invoke();
+        Destroy(ally.gameObject);
     }
 
     public List<Ally> GetAlliesOfType(AttackType attackType)

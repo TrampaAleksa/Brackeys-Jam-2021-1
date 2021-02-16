@@ -22,6 +22,7 @@ public class EnemyAi : MonoBehaviour
         navMeshAgent = GetComponent<NavMeshAgent>();
         meleeAttack = GetComponent<MeleeAttack>();
         _transform = transform;
+        AllyList.allyDiedEvent += TargetKilled;
     }
 
     private void Start()
@@ -32,6 +33,12 @@ public class EnemyAi : MonoBehaviour
 
     private Transform FirstAllyInList()
     {
+        if (allyList.allies.Count == 0)
+        {
+            print("Game over");
+            return transform;
+        }
+        
         if (allyList.allies.Count == 0) return transform;
         if (allyList.allies[0] == null) return transform;
         
@@ -62,11 +69,17 @@ public class EnemyAi : MonoBehaviour
         }
 
         meleeAttack.LaunchAttack(currentTarget);
+        
         gameObject.AddComponent<TimedAction>().StartTimedAction(FinishAttack, timeBetweenAttacks);
     }
 
     private void FinishAttack()
     {
         attackInCooldown = false;
+    }
+
+    private void TargetKilled()
+    {
+        currentTarget = FirstAllyInList();
     }
 }

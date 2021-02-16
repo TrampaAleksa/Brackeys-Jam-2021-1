@@ -17,5 +17,10 @@ public class PlayerHitByAttack : AttackHitDetector
         base.HitByAttack(attackType, baseAttackDamage);
         playerHealth.TakeDamage(baseAttackDamage);
         print("The player was hit by an attack and took : " +  baseAttackDamage + " damage");
+
+        if (playerHealth.currentHealth <= 0001f)
+        {
+            AllyList.Instance.AllyDied(playerHealth.transform.parent.GetComponent<Ally>());
+        }
     }
 }
