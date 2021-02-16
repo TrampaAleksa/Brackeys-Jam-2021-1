@@ -62,7 +62,7 @@ public class AllyMovement : MonoBehaviour
             transform.LookAt(player.transform);
     }
     
-    public bool InAttackRange => ally.navMeshAgent.remainingDistance < ally.navMeshAgent.stoppingDistance;
+    public bool InAttackRange => ally.navMeshAgent.remainingDistance < ally.navMeshAgent.stoppingDistance && ally.navMeshAgent.remainingDistance > 0.005f;
 
 }
 
