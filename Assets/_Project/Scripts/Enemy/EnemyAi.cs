@@ -7,35 +7,46 @@ using UnityEngine.AI;
 public class EnemyAi : MonoBehaviour
 {
     public float timeBetweenAttacks;
-    
+
     private AllyList allyList;
     private MeleeAttack meleeAttack;
     private NavMeshAgent navMeshAgent;
-    
+
     private bool attackInCooldown;
-    private int currentIndex;
+    private Transform currentTarget;
+
+    private Transform _transform;
 
     void Awake()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
         meleeAttack = GetComponent<MeleeAttack>();
+        _transform = transform;
     }
 
     private void Start()
     {
         allyList = AllyList.Instance;
+        currentTarget = FirstAllyInList();
+    }
+
+    private Transform FirstAllyInList()
+    {
+        if (allyList.allies.Count == 0) return transform;
+        if (allyList.allies[0] == null) return transform;
+        
+        return allyList.allies[0].transform;
     }
 
     void Update()
     {
-        // TryAttacking();
+        TryAttacking();
     }
 
     private void TryAttacking()
     {
-        if (allyList.allies.Count != 0 && currentIndex < allyList.allies.Count)
-            navMeshAgent.SetDestination(allyList.allies[currentIndex].transform.transform.position);
-        else return;
+        navMeshAgent.SetDestination(currentTarget.position);
+        if (currentTarget == _transform) return;
 
         var inAttackRange = navMeshAgent.remainingDistance < navMeshAgent.stoppingDistance;
         if (!inAttackRange) return;
@@ -50,7 +61,7 @@ public class EnemyAi : MonoBehaviour
             return;
         }
 
-        meleeAttack.LaunchAttack(allyList.allies[currentIndex].transform);
+        meleeAttack.LaunchAttack(currentTarget);
         gameObject.AddComponent<TimedAction>().StartTimedAction(FinishAttack, timeBetweenAttacks);
     }
 

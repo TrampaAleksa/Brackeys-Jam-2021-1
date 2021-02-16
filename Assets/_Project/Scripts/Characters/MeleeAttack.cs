@@ -7,6 +7,6 @@ public class MeleeAttack : Attack
     {
             base.LaunchAttack(target);
             print("Launching melee attack!");
-            target.GetComponent<AttackHitDetector>().HitByAttack(type, baseDamage);
+            target.GetComponent<Ally>().hitDetector.HitByAttack(type, baseDamage);
     }
 }

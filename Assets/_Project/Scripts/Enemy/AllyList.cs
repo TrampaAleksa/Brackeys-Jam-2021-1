@@ -1,11 +1,13 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class AllyList : MonoBehaviour
 {
     public static AllyList Instance;
+    public static Action allyDiedEvent;
+    
     public List<Ally> allies;
-
     private GameObject _player;
 
     private void Awake()
@@ -22,6 +24,7 @@ public class AllyList : MonoBehaviour
     public void AllyDied(Ally ally)
     {
         allies.Remove(ally);
+        allyDiedEvent?.Invoke();
     }
 
     public List<Ally> GetAlliesOfType(AttackType attackType)
