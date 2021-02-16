@@ -5,23 +5,31 @@ public class AllyAttackAi : MonoBehaviour
 {
     public float timeBetweenAttacks;
     [NonSerialized] public Ally ally;
+    private AIMovementBattle _aiMovementBattle;
+    private Attack _attack;
     private bool attackInCooldown;
+
+    private void Start()
+    {
+        _aiMovementBattle = ally == null ? GetComponent<AIMovementBattle>() : ally.aiMovementBattle;
+        _attack = ally == null ? GetComponent<Attack>() : ally.attack;
+    }
 
     private void Update()
     {
-        if (!ally.aiMovementBattle.enabled) return;
+        if (!_aiMovementBattle.enabled) return;
         
         TryAttacking();
     }
 
     private void TryAttacking()
     {
-        if (!ally.aiMovementBattle.InAttackRange()) return;
+        if (!_aiMovementBattle.InAttackRange()) return;
         
         if (attackInCooldown) return;
 
         attackInCooldown = true;
-        ally.attack.LaunchAttack(ally.aiMovementBattle.target.transform);
+        _attack.LaunchAttack(_aiMovementBattle.target.transform);
         gameObject.AddComponent<TimedAction>().StartTimedAction(FinishAttack, timeBetweenAttacks);
     }
 
@@ -29,4 +37,5 @@ public class AllyAttackAi : MonoBehaviour
     {
         attackInCooldown = false;
     }
+    
 }
