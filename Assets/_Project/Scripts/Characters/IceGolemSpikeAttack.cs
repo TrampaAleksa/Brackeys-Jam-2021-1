@@ -1,16 +1,27 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class IceGolemSpikeAttack : Attack
 {
     public GameObject spikeObj;
     public int numberOfSpikes;
     public float rangeBetweenSpikes;
-    
+    private Transform _golemTransform;
+
+    private void Awake()
+    {
+        _golemTransform = transform;
+    }
+
     public override void LaunchAttack(Transform target)
     {
         base.LaunchAttack(target);
         print("Launching spike attack!");
 
-        Instantiate(spikeObj, target.position, transform.rotation);
+        for (int i = 0; i < numberOfSpikes; i++)
+        {
+            var currentSpawnPosition = _golemTransform.forward * (3f * (i+1)) + _golemTransform.position;
+            Instantiate(spikeObj, currentSpawnPosition, _golemTransform.rotation);
+        }
     }
 }
