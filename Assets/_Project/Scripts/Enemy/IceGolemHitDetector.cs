@@ -22,5 +22,10 @@ public class IceGolemHitDetector : AttackHitDetector
         
         _health.TakeDamage(totalDamageTaken);
         print("Ice goldem took: " + totalDamageTaken +  " damage");
+
+        if (_health.currentHealth <= 0.001f)
+        {
+            AllyList.Instance.ExitAllyCombat();
+        }
     }
 }

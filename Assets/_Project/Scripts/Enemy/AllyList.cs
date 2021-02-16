@@ -6,9 +6,12 @@ public class AllyList : MonoBehaviour
     public static AllyList Instance;
     public List<Ally> allies;
 
+    private GameObject _player;
+
     private void Awake()
     {
         Instance = this;
+        _player = GameObject.FindWithTag("Player");
     }
 
     public void AllyRaised(Ally toAdd)
@@ -43,6 +46,15 @@ public class AllyList : MonoBehaviour
             allies[i].aiMovementBattle.enabled = true;
             allies[i].aiMovement.enabled = false;
         }
+    }
 
+    public void ExitAllyCombat()
+    {
+        for (int i = 0; i < allies.Count; i++)
+        {
+            allies[i].aiMovementBattle.target = _player.gameObject;
+            allies[i].aiMovementBattle.enabled = false;
+            allies[i].aiMovement.enabled = true;
+        }
     }
 }
