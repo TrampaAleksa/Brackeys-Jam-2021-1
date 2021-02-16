@@ -4,8 +4,7 @@ public class Attack : MonoBehaviour
 {
     public AttackType type;
     public float baseDamage;
-    
-    
+
     public virtual void LaunchAttack(Transform target)
     {
         

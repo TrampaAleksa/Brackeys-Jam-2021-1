@@ -6,43 +6,39 @@ using UnityEngine.AI;
 
 public class AIMovementBattle : MonoBehaviour
 {
-    [SerializeField]
-    public GameObject target;
-    [SerializeField]
-    GameObject player;
-    [NonSerialized] public NavMeshAgent navMeshAgent;
+    [SerializeField] public GameObject target;
+    [SerializeField] GameObject player;
     public bool isRetreating = false;
-    [SerializeField]
-    float radiusInBattle = 1f;
+    [SerializeField] float radiusInBattle = 1f;
     GameObject lookAt;
-    // Start is called before the first frame update
-    void Start()
-    {
-        navMeshAgent = GetComponent<NavMeshAgent>();     
-    }
 
-    // Update is called once per frame
+    [NonSerialized] public Ally ally;
+
     void Update()
     {
         if (!isRetreating)
         {
-            navMeshAgent.SetDestination(target.transform.transform.position);
+            ally.navMeshAgent.SetDestination(target.transform.transform.position);
             lookAt = target;
         }
         else
         {
-            navMeshAgent.SetDestination(player.transform.position);
+            ally.navMeshAgent.SetDestination(player.transform.position);
             lookAt = player;
         }
+
         if (Input.GetMouseButtonDown(0))
         {
             isRetreating = true;
         }
+
         if (Input.GetMouseButtonDown(1))
             isRetreating = false;
-         if (navMeshAgent.remainingDistance <= navMeshAgent.stoppingDistance)
+        if (ally.navMeshAgent.remainingDistance <= ally.navMeshAgent.stoppingDistance)
             transform.LookAt(lookAt.transform);
-        navMeshAgent.radius = radiusInBattle;
+        ally.navMeshAgent.radius = radiusInBattle;
     }
 
+
+    public bool InAttackRange() => ally.navMeshAgent.remainingDistance < ally.navMeshAgent.stoppingDistance;
 }

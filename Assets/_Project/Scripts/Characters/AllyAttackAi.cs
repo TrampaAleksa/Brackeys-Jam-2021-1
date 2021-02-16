@@ -1,37 +1,30 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class AllyAttackAi : MonoBehaviour
 {
-
     public float timeBetweenAttacks;
     
-    private AIMovementBattle aiMovementBattle;
-    private Attack _attack;
+    [NonSerialized] public Ally ally;
 
     private bool attackInCooldown;
 
-    private void Awake()
-    {
-        _attack = GetComponent<Attack>();
-        aiMovementBattle = GetComponent<AIMovementBattle>();
-    }
 
     private void Update()
     {
-        if (!aiMovementBattle.enabled) return;
+        if (!ally.aiMovementBattle.enabled) return;
         
         TryAttacking();
     }
 
     private void TryAttacking()
     {
-        var inAttackRange = aiMovementBattle.navMeshAgent.remainingDistance < aiMovementBattle.navMeshAgent.stoppingDistance;
-        if (!inAttackRange) return;
+        if (!ally.aiMovementBattle.InAttackRange()) return;
         
         if (attackInCooldown) return;
 
         attackInCooldown = true;
-        _attack.LaunchAttack(aiMovementBattle.target.transform);
+        ally.attack.LaunchAttack(ally.aiMovementBattle.target.transform);
         gameObject.AddComponent<TimedAction>().StartTimedAction(FinishAttack, timeBetweenAttacks);
     }
 

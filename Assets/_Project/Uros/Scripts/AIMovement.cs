@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
@@ -7,22 +8,18 @@ public class AIMovement : MonoBehaviour
 {
     [SerializeField]
     GameObject player;
-    NavMeshAgent navMeshAgent;
     [SerializeField]
     float radiusOutOfBattle = 1.5f;
-    // Start is called before the first frame update
-    void Start()
-    {
-        navMeshAgent = GetComponent<NavMeshAgent>();
-       
-    }
 
-    // Update is called once per frame
+    [NonSerialized] public Ally ally;
+
     void Update()
     {
-        navMeshAgent.SetDestination(player.transform.position);
-        if (navMeshAgent.remainingDistance <= navMeshAgent.stoppingDistance)
+        AllyNavMeshAgent.SetDestination(player.transform.position);
+        if (AllyNavMeshAgent.remainingDistance <= AllyNavMeshAgent.stoppingDistance)
             transform.LookAt(player.transform);
-        navMeshAgent.radius =radiusOutOfBattle;
+        AllyNavMeshAgent.radius = radiusOutOfBattle;
     }
+
+    private NavMeshAgent AllyNavMeshAgent => ally.navMeshAgent;
 }
