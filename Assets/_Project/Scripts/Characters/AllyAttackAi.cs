@@ -4,11 +4,8 @@ using UnityEngine;
 public class AllyAttackAi : MonoBehaviour
 {
     public float timeBetweenAttacks;
-    
     [NonSerialized] public Ally ally;
-
     private bool attackInCooldown;
-
 
     private void Update()
     {

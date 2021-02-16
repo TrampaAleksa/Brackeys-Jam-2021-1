@@ -9,9 +9,9 @@ public class Ally : MonoBehaviour
     [NonSerialized]public AttackHitDetector hitDetector;
     [NonSerialized]public AIMovementBattle aiMovementBattle;
     [NonSerialized]public AIMovement aiMovement;
+    [NonSerialized]public NavMeshAgent navMeshAgent;
 
     private AllyAttackAi _allyAttackAi;
-    public NavMeshAgent navMeshAgent;
 
     private void Awake()
     {

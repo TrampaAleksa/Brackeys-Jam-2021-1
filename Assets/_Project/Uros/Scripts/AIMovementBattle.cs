@@ -14,6 +14,11 @@ public class AIMovementBattle : MonoBehaviour
 
     [NonSerialized] public Ally ally;
 
+    private void Awake()
+    {
+        player = player ==null? GameObject.FindWithTag("Player") : player;
+    }
+
     void Update()
     {
         if (!isRetreating)

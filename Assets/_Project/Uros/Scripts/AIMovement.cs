@@ -12,6 +12,11 @@ public class AIMovement : MonoBehaviour
     float radiusOutOfBattle = 1.5f;
 
     [NonSerialized] public Ally ally;
+    
+    private void Awake()
+    {
+        player = player ==null? GameObject.FindWithTag("Player") : player;
+    }
 
     void Update()
     {
