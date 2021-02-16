@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class IceGiantGroundImpactDestroyer : MonoBehaviour
+public class SpawnCircleDestroy : MonoBehaviour
 {
     public float xSeconds = 3.6f;
 
