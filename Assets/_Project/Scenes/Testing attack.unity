@@ -1167,6 +1167,7 @@ MonoBehaviour:
   - {fileID: 1783620094}
   - {fileID: 336285817}
   - {fileID: 1051230545}
+  - {fileID: 2054613010952313377}
 --- !u!4 &1154437273
 Transform:
   m_ObjectHideFlags: 0
@@ -2036,10 +2037,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ice Mage
       objectReference: {fileID: 0}
-    - target: {fileID: 1350203507952716988, guid: 64f04f29304992a4c94a83533aa4d4f4, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 7ea12b207773e4d44b76b4d215bd88d6, type: 2}
     - target: {fileID: 1350203507952716990, guid: 64f04f29304992a4c94a83533aa4d4f4, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -2083,6 +2080,10 @@ PrefabInstance:
     - target: {fileID: 1350203507952716990, guid: 64f04f29304992a4c94a83533aa4d4f4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1350203507966842977, guid: 64f04f29304992a4c94a83533aa4d4f4, type: 3}
+      propertyPath: projectileSpeed
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 64f04f29304992a4c94a83533aa4d4f4, type: 3}
@@ -2165,6 +2166,17 @@ PrefabInstance:
     - {fileID: 2054613011756719871, guid: b26a3f50b6d61c641b235962e424dba9, type: 3}
     - {fileID: 2054613011756719870, guid: b26a3f50b6d61c641b235962e424dba9, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b26a3f50b6d61c641b235962e424dba9, type: 3}
+--- !u!114 &2054613010952313377 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1350203507952716985, guid: 64f04f29304992a4c94a83533aa4d4f4, type: 3}
+  m_PrefabInstance: {fileID: 1026698987592701592}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80d960f221624d1fb39ce4a6b1ec0191, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &2054613010952313382 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1350203507952716990, guid: 64f04f29304992a4c94a83533aa4d4f4, type: 3}
