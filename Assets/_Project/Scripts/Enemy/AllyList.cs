@@ -49,6 +49,8 @@ public class AllyList : MonoBehaviour
             allies[i].movement.target = boss.gameObject;
             allies[i].movement.state = AllyMovementState.InBattle;
         }
+
+        boss.GetComponentInChildren<EnemyAi>().enabled = true;
     }
 
     public void ExitAllyCombat()
