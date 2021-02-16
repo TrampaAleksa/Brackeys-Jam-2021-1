@@ -5,7 +5,7 @@ using UnityEngine;
 public class RetreatAlly : MonoBehaviour
 {
     Camera mainCamera;
-    AIMovementBattle aiMovementBattle;
+    Ally ally;
     void Start()
     {
         mainCamera = Camera.main;
@@ -21,8 +21,8 @@ public class RetreatAlly : MonoBehaviour
             {
                 if (hit.collider.gameObject.CompareTag("Ally"))
                 {
-                    aiMovementBattle = hit.collider.GetComponent<AIMovementBattle>();
-                    aiMovementBattle.isRetreating = true;
+                    ally = hit.collider.GetComponent<Ally>();
+                    ally.aiMovementBattle.isRetreating = true;
                     Debug.Log("Did Hit");
                 }
             }
