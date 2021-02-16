@@ -55,7 +55,7 @@ public class EnemyAi : MonoBehaviour
         navMeshAgent.SetDestination(currentTarget.position);
         if (currentTarget == _transform) return;
 
-        var inAttackRange = navMeshAgent.remainingDistance < navMeshAgent.stoppingDistance;
+        var inAttackRange = navMeshAgent.remainingDistance < navMeshAgent.stoppingDistance && navMeshAgent.remainingDistance > 0.0005f;
         if (!inAttackRange) return;
 
         if (attackInCooldown) return;

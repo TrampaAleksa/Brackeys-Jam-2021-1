@@ -26,6 +26,7 @@ public class IceGolemHitDetector : AttackHitDetector
         if (_health.currentHealth <= 0.001f)
         {
             AllyList.Instance.ExitAllyCombat();
+            Destroy(gameObject);
         }
     }
 }
