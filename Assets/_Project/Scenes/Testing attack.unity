@@ -1725,10 +1725,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fire Mage (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 2054613011753863723, guid: b26a3f50b6d61c641b235962e424dba9, type: 3}
-      propertyPath: m_StoppingDistance
-      value: 11
-      objectReference: {fileID: 0}
     - target: {fileID: 2054613011753863727, guid: b26a3f50b6d61c641b235962e424dba9, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1772,6 +1768,10 @@ PrefabInstance:
     - target: {fileID: 2054613011753863727, guid: b26a3f50b6d61c641b235962e424dba9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2054613011756719856, guid: b26a3f50b6d61c641b235962e424dba9, type: 3}
+      propertyPath: projectileSpeed
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b26a3f50b6d61c641b235962e424dba9, type: 3}
