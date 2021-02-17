@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: OutterLayer
+  m_Shader: {fileID: -6465566751694194690, guid: b8912cd96ecd820459ca143261d3dd86, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs: []
+    m_Floats:
+    - Vector1_2F05D78A: 30
+    - Vector1_5848F016: 0.1
+    - Vector1_A03E7625: 2
+    - Vector1_ABBB62FC: 1000
+    - Vector1_B40C58D2: 0.26
+    - Vector1_CAC40FD9: 0.169
+    - Vector1_CF5E23A3: 2
+    m_Colors:
+    - Color_99200EE8: {r: 0.13616943, g: 0.13724269, b: 0.18867922, a: 0}
+    - Vector2_2586A3D9: {r: 0, g: 0, b: 0, a: 0}
+    - Vector2_54546506: {r: 0, g: -0.3, b: 0, a: 0}
+    - Vector2_73004A55: {r: 0, g: 0, b: 0, a: 0}
+    - Vector2_CFFC17FD: {r: 0, g: 1, b: 0, a: 0}
+    - Vector3_BD3DE4C4: {r: 0.001, g: 0, b: 0, a: 0}
+  m_BuildTextureStacks: []
