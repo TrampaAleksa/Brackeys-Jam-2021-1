@@ -19,6 +19,8 @@ public class SpawnAllies : MonoBehaviour
     int indexOfSpawningAlly;
     bool startSpawning = false;
     [SerializeField] float timeTillSpawn = 3.5f;
+    GameObject ally;
+    AllyList allyList;
     void Start()
     {
        
@@ -34,9 +36,6 @@ public class SpawnAllies : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0) && buttonsActive)
-        {
-        }
         if (Input.GetMouseButtonDown(0))
         {
             Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
@@ -73,15 +72,17 @@ public class SpawnAllies : MonoBehaviour
                 SpawnAlly();
             }
         }
-
+        
     }
-    void TaskOnClick(int index)
+    public void TaskOnClick(int index)
     {
         ChangeButtosActivity();
         Instantiate(necroRings[index], spawningPlace.position, Quaternion.identity);
         startSpawning = true;
         indexOfSpawningAlly = index;
-
+        ally= Instantiate(allyTypes[indexOfSpawningAlly], spawningObject.transform.position, Quaternion.identity);
+        ally.transform.parent = spawningObject.transform;
+        //ally.transform.GetChild(0).gameObject.SetActive(false) ;
     }
     void ChangeButtosActivity()
     {
@@ -94,10 +95,17 @@ public class SpawnAllies : MonoBehaviour
 
     void SpawnAlly()
     {
-        Instantiate(allyTypes[indexOfSpawningAlly], spawningObject.transform.position, Quaternion.identity);
+        ally.GetComponent<Animator>().enabled = false;
+        //ally.transform.GetChild(0).gameObject.SetActive(true);
+        allyList = AllyList.Instance;        
+        allyList.AllyRaised(ally.GetComponent<Ally>());
+        spawningObject.transform.DetachChildren();
         Destroy(spawningObject);
         elapsedTime = 0;
         startSpawning = false;
     }
-
+    private void OnMouseOver()
+    {
+        
+    }
 }
