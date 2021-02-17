@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 2054613011753863722}
   - component: {fileID: 2054613011753863723}
   - component: {fileID: 2054613011753863720}
-  - component: {fileID: 5693815101905610052}
   m_Layer: 0
   m_Name: Fire Mage
   m_TagString: Ally
@@ -133,25 +132,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80d960f221624d1fb39ce4a6b1ec0191, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!95 &5693815101905610052
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2054613011753863721}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 33e1de27eb541424dbdaf01b85264d87, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &3861672202457097064
 PrefabInstance:
   m_ObjectHideFlags: 0
