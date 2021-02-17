@@ -14,10 +14,11 @@ public class IceSpikesCollider : MonoBehaviour
         {
             other.GetComponent<Ally>().hitDetector.HitByAttack(type, baseAttackDamage);
         }
-        
+        /*
         if (other.CompareTag("Player"))
         {
             other.GetComponent<AttackHitDetector>().HitByAttack(type, baseAttackDamage);
         }
+        */
     }
 }
