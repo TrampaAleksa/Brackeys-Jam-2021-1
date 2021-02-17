@@ -23,6 +23,8 @@ public class AllyMovement : MonoBehaviour
     {
         switch (state)
         {
+            case AllyMovementState.Disabled:
+                break;
             case AllyMovementState.OutOfBattle:
                 OutOfCombatMovement();
                 break;
@@ -70,5 +72,6 @@ public enum AllyMovementState
 {
     OutOfBattle,
     InBattle,
-    Retreating
+    Retreating,
+    Disabled
 }
