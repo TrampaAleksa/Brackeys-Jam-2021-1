@@ -395,7 +395,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 237193716}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -29.67}
+  m_LocalPosition: {x: 0, y: 0, z: -697}
   m_LocalScale: {x: 0.39, y: 1.74, z: 1}
   m_Children: []
   m_Father: {fileID: 1307012800}
@@ -1768,7 +1768,7 @@ GameObject:
   - component: {fileID: 1150202023}
   m_Layer: 5
   m_Name: Button
-  m_TagString: UIIceMage
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1781,7 +1781,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1150202021}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -29.67}
+  m_LocalPosition: {x: 0, y: 0, z: -33}
   m_LocalScale: {x: 0.34, y: 1.74, z: 1}
   m_Children: []
   m_Father: {fileID: 1307012800}
@@ -1789,7 +1789,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -191.4, y: -66.9}
+  m_AnchoredPosition: {x: -201.3, y: -66.9}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1150202023
@@ -1860,7 +1860,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4041,7 +4041,7 @@ GameObject:
   - component: {fileID: 2089398751}
   m_Layer: 5
   m_Name: Button (1)
-  m_TagString: UIFireMage
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

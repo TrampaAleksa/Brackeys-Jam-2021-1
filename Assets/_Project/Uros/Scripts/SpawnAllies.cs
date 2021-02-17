@@ -60,7 +60,7 @@ public class SpawnAllies : MonoBehaviour
         {
             if (spawningObject != null)
                 actualDistance = Vector3.Distance(gameObject.transform.position, spawningPlace.position);
-            if (allowedDistanceToSpawn <= actualDistance)
+            if (allowedDistanceToSpawn <= actualDistance || Input.GetMouseButtonDown(1))
             {
                 ChangeButtosActivity();
             }
@@ -70,10 +70,7 @@ public class SpawnAllies : MonoBehaviour
             elapsedTime += Time.deltaTime;
             if(elapsedTime >= timeTillSpawn)
             {
-                Instantiate(allyTypes[indexOfSpawningAlly], spawningObject.transform.position, Quaternion.identity);
-                Destroy(spawningObject);
-                elapsedTime = 0;
-                startSpawning = false;
+                SpawnAlly();
             }
         }
 
@@ -95,6 +92,12 @@ public class SpawnAllies : MonoBehaviour
         buttonsActive = !buttonsActive;
     }
 
-
+    void SpawnAlly()
+    {
+        Instantiate(allyTypes[indexOfSpawningAlly], spawningObject.transform.position, Quaternion.identity);
+        Destroy(spawningObject);
+        elapsedTime = 0;
+        startSpawning = false;
+    }
 
 }
