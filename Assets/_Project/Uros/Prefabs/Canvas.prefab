@@ -1,75 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &203173197
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 203173198}
-  - component: {fileID: 203173199}
-  m_Layer: 5
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &203173198
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 203173197}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 6421745504971004792}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &203173199
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 203173197}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ddf549d2a1deea4396fe47ed7c1154d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buttons:
-  - {fileID: 6421745504818545951}
-  - {fileID: 6421745505758135399}
-  - {fileID: 6421745505042748417}
-  - {fileID: 6421745503901727822}
-  buttonsObjects:
-  - {fileID: 6421745504818545949}
-  - {fileID: 6421745505758135397}
-  - {fileID: 6421745505042748431}
-  - {fileID: 6421745503901727820}
-  allowedDistanceToSpawn: 10
-  necroRings:
-  - {fileID: 3857721846358920497, guid: 19ecd12de94fcb2478ec9953d264b5ef, type: 3}
-  - {fileID: 6660224609416620768, guid: 65ad8e822dc907648918d909ed8254e3, type: 3}
-  - {fileID: 3857721846358920497, guid: 19ecd12de94fcb2478ec9953d264b5ef, type: 3}
-  - {fileID: 6660224609416620768, guid: 65ad8e822dc907648918d909ed8254e3, type: 3}
-  allyTypes:
-  - {fileID: 2054613011753863721, guid: b26a3f50b6d61c641b235962e424dba9, type: 3}
-  - {fileID: 1350203507952716984, guid: 64f04f29304992a4c94a83533aa4d4f4, type: 3}
-  - {fileID: 6522283556658524635, guid: 571d4e313f74d41458a90f053533d586, type: 3}
-  - {fileID: 2054613011753863721, guid: b26a3f50b6d61c641b235962e424dba9, type: 3}
-  timeTillSpawn: 3.5
 --- !u!1 &6421745503901727820
 GameObject:
   m_ObjectHideFlags: 0
@@ -97,7 +27,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6421745503901727820}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -697}
+  m_LocalPosition: {x: 0, y: 0, z: -22}
   m_LocalScale: {x: 0.39, y: 1.74, z: 1}
   m_Children: []
   m_Father: {fileID: 6421745504971004792}
@@ -105,7 +35,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 187.4, y: -66.9}
+  m_AnchoredPosition: {x: 160, y: -66.9}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6421745503901727808
@@ -129,7 +59,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0.6759999, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -189,9 +119,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 11500000, guid: 4ddf549d2a1deea4396fe47ed7c1154d, type: 3}
         m_TargetAssemblyTypeName: SpawnAllies, Assembly-CSharp
-        m_MethodName: TaskOnClick
+        m_MethodName: 
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -260,7 +190,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.990566, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -320,9 +250,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 11500000, guid: 4ddf549d2a1deea4396fe47ed7c1154d, type: 3}
         m_TargetAssemblyTypeName: SpawnAllies, Assembly-CSharp
-        m_MethodName: TaskOnClick
+        m_MethodName: 
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -366,7 +296,6 @@ RectTransform:
   - {fileID: 6421745505758135398}
   - {fileID: 6421745505042748416}
   - {fileID: 6421745503901727821}
-  - {fileID: 203173198}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -494,7 +423,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.57580614, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -554,9 +483,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 11500000, guid: 4ddf549d2a1deea4396fe47ed7c1154d, type: 3}
         m_TargetAssemblyTypeName: SpawnAllies, Assembly-CSharp
-        m_MethodName: TaskOnClick
+        m_MethodName: 
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -625,7 +554,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0.64557576, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -685,9 +614,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 11500000, guid: 4ddf549d2a1deea4396fe47ed7c1154d, type: 3}
         m_TargetAssemblyTypeName: SpawnAllies, Assembly-CSharp
-        m_MethodName: TaskOnClick
+        m_MethodName: 
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

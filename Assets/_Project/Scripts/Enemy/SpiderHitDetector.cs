@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class IceGolemHitDetector : AttackHitDetector
+﻿public class SpiderHitDetector : AttackHitDetector
 {
     private float damageReduction = 0.2f;
     private Health _health;
@@ -17,11 +12,11 @@ public class IceGolemHitDetector : AttackHitDetector
     {
         var totalDamageTaken = baseAttackDamage;
 
-        if (attackType == AttackType.Ice)
+        if (attackType == AttackType.Fire)
             totalDamageTaken *= damageReduction;
         
         _health.TakeDamage(totalDamageTaken);
-        print("Ice goldem took: " + totalDamageTaken +  " damage");
+        print("Spider took: " + totalDamageTaken +  " damage");
 
         if (_health.currentHealth <= 0.001f)
         {
