@@ -9,6 +9,8 @@ TagManager:
   - Character
   - SpawningAlly
   - box
+  - Buttons
+  - HealingZone
   layers:
   - Default
   - TransparentFX

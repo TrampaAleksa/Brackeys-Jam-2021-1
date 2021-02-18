@@ -17,7 +17,7 @@ public class Health : MonoBehaviour
             print(gameObject.name + " Died!");
         }
     }
-
+    
     public virtual void Heal(float healAmount)
     {
         currentHealth += healAmount;

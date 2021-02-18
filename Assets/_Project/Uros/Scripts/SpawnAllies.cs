@@ -66,13 +66,13 @@ public class SpawnAllies : MonoBehaviour
     {
         
             SpawnAlliesUi.Instance.ChangeButtosActivity();
-        if (manaPool.remainingMana >= manaPool.resurrectionCost)
+        if (manaPool.remainingMana >= manaPool.healCost)
         {
             var spawnTarget = spawningObject.gameObject.GetComponent<SpawnTarget>();
             if (spawnTarget.isSpawning) return;
 
             spawnTarget.StartSpawning(allyTypes[index], necroRings[index]);
-            manaPool.CastedResurrection();
+            manaPool.CastedHeal();
         }
         else print("Not enough mana for resurrection");
     }
