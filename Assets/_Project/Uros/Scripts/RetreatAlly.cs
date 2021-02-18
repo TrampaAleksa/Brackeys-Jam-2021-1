@@ -25,16 +25,15 @@ public class RetreatAlly : MonoBehaviour
                 {
                     
                     ally = hit.collider.GetComponent<Ally>();
-                    if (manaPool.remainingMana >= manaPool.resurrectionCost)
+                    if (manaPool.remainingMana >= manaPool.retreatCost)
                     {
                         if (ally.movement.state == AllyMovementState.InBattle)
                         {
                             ally.movement.state = AllyMovementState.Retreating;
-                            manaPool.remainingMana -= manaPool.resurrectionCost;
+                            manaPool.CastedRetreat();
                             print("Did Hit");
                         }
-                        else print("Already retreating");
-                    }else print("Not enough mana");
+                    }
                     
                 }
             }

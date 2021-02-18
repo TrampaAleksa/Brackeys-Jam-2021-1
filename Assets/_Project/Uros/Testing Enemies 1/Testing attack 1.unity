@@ -816,7 +816,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   remainingMana: 100
   resurrectionCost: 30
-  retreatCost: 20
+  retreatCost: 40
 --- !u!1 &802098461
 GameObject:
   m_ObjectHideFlags: 0
