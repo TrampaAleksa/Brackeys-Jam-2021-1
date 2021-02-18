@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+
 public class SpawnAllies : MonoBehaviour
 {
     [SerializeField] Button[] buttons;
@@ -13,14 +14,10 @@ public class SpawnAllies : MonoBehaviour
     Transform spawningPlace;
     float actualDistance;
     bool buttonsActive = false;
+    
     GameObject spawningObject;
     [SerializeField] GameObject[] necroRings;
     [SerializeField] GameObject[] allyTypes;
-    float elapsedTime;
-    bool startSpawning = false;
-    [SerializeField] float timeTillSpawn = 4f;
-    GameObject ally;
-    AllyList allyList;
 
     private GameObject _player;
 
@@ -31,7 +28,6 @@ public class SpawnAllies : MonoBehaviour
 
     void Start()
     {
-       
         mainCamera = Camera.main;
         for (int i = 0; i < buttons.Length; i++)
         {
@@ -39,7 +35,6 @@ public class SpawnAllies : MonoBehaviour
             int indexOfButton = i;
             buttons[indexOfButton].onClick.AddListener(() => TaskOnClick(indexOfButton));
         }
-
     }
 
     private void Update()
@@ -55,6 +50,7 @@ public class SpawnAllies : MonoBehaviour
                 ChangeButtosActivity();
             }
         }
+
         if (Input.GetMouseButtonDown(0))
         {
             Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
@@ -66,49 +62,35 @@ public class SpawnAllies : MonoBehaviour
                     spawningObject = hit.collider.gameObject;
                     spawningPlace = spawningObject.transform;
                     actualDistance = Vector3.Distance(_player.transform.position, spawningPlace.position);
-                    print(actualDistance);                
-                    if (allowedDistanceToSpawn >= actualDistance)
+                    if (allowedDistanceToSpawn >= actualDistance && !spawningObject.GetComponent<SpawnTarget>().isSpawning)
                     {
                         ChangeButtosActivity();
                     }
                 }
             }
         }
-        
-        if (startSpawning)
-        {
-            elapsedTime += Time.deltaTime;
-            if(elapsedTime >= timeTillSpawn)
-            {
-                elapsedTime = 0;
-                startSpawning = false;
-                // SpawnAlly();
-            }
-        }
     }
+
     public void TaskOnClick(int index)
     {
-        // if (!startSpawning)
-        {
-            ChangeButtosActivity();
+        ChangeButtosActivity();
 
-            var spawnTarget = spawningObject.gameObject.GetComponent<SpawnTarget>();
-            if (spawnTarget.isSpawning) return;
-            
-            spawnTarget.StartSpawning(allyTypes[index], necroRings[index]);
-            
-            
-            // Instantiate(necroRings[index], spawningPlace.position, Quaternion.identity);
-        }
+        var spawnTarget = spawningObject.gameObject.GetComponent<SpawnTarget>();
+        if (spawnTarget.isSpawning) return;
+
+        spawnTarget.StartSpawning(allyTypes[index], necroRings[index]);
+
         //ally.transform.parent = spawningObject.transform;
         //ally.transform.GetChild(0).gameObject.SetActive(false) ;
     }
+
     void ChangeButtosActivity()
     {
         for (int i = 0; i < buttonsObjects.Length; i++)
         {
             buttonsObjects[i].SetActive(!buttonsActive);
         }
+
         buttonsActive = !buttonsActive;
     }
 
@@ -118,7 +100,27 @@ public class SpawnAllies : MonoBehaviour
     }
 }
 
-public class SpawnAlliesRaycastHandler : MonoBehaviour
+public class SpawnAlliesUi : MonoBehaviour
 {
+    public static SpawnAlliesUi Instance;
     
+    [SerializeField] Button[] buttons;
+    [SerializeField] GameObject[] buttonsObjects;
+    
+    public bool buttonsActive;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
+
+    public void ChangeButtosActivity()
+    {
+        for (int i = 0; i < buttonsObjects.Length; i++)
+        {
+            buttonsObjects[i].SetActive(!buttonsActive);
+        }
+
+        buttonsActive = !buttonsActive;
+    }
 }
