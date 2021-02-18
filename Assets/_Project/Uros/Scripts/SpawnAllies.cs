@@ -17,7 +17,6 @@ public class SpawnAllies : MonoBehaviour
     [SerializeField] GameObject[] necroRings;
     [SerializeField] GameObject[] allyTypes;
     float elapsedTime;
-    int indexOfSpawningAlly;
     bool startSpawning = false;
     [SerializeField] float timeTillSpawn = 4f;
     GameObject ally;
@@ -81,18 +80,25 @@ public class SpawnAllies : MonoBehaviour
             elapsedTime += Time.deltaTime;
             if(elapsedTime >= timeTillSpawn)
             {
-                SpawnAlly();
+                elapsedTime = 0;
+                startSpawning = false;
+                // SpawnAlly();
             }
         }
     }
     public void TaskOnClick(int index)
     {
-        if (!startSpawning)
+        // if (!startSpawning)
         {
             ChangeButtosActivity();
-            Instantiate(necroRings[index], spawningPlace.position, Quaternion.identity);
-            startSpawning = true;
-            indexOfSpawningAlly = index;
+
+            var spawnTarget = spawningObject.gameObject.GetComponent<SpawnTarget>();
+            if (spawnTarget.isSpawning) return;
+            
+            spawnTarget.StartSpawning(allyTypes[index], necroRings[index]);
+            
+            
+            // Instantiate(necroRings[index], spawningPlace.position, Quaternion.identity);
         }
         //ally.transform.parent = spawningObject.transform;
         //ally.transform.GetChild(0).gameObject.SetActive(false) ;
@@ -106,20 +112,13 @@ public class SpawnAllies : MonoBehaviour
         buttonsActive = !buttonsActive;
     }
 
-    void SpawnAlly()
-    {
-        //ally.GetComponent<Animator>().enabled = false;
-        //ally.transform.GetChild(0).gameObject.SetActive(true);
-        ally = Instantiate(allyTypes[indexOfSpawningAlly], spawningObject.transform.position, Quaternion.identity);
-        allyList = AllyList.Instance;        
-        allyList.AllyRaised(ally.GetComponent<Ally>());
-        spawningObject.transform.DetachChildren();
-        Destroy(spawningObject);
-        elapsedTime = 0;
-        startSpawning = false;
-    }
     bool IsMouseOverUI()
     {
         return EventSystem.current.IsPointerOverGameObject();
     }
+}
+
+public class SpawnAlliesRaycastHandler : MonoBehaviour
+{
+    
 }
