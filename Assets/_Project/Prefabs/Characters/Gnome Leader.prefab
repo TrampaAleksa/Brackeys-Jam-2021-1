@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5320924343367853629}
   - component: {fileID: 5320924343367853628}
   - component: {fileID: 5320924343367853631}
+  - component: {fileID: 5086434402570310659}
   m_Layer: 0
   m_Name: Gnome Leader
   m_TagString: Ally
@@ -132,20 +133,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80d960f221624d1fb39ce4a6b1ec0191, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &6972594434867449722
+--- !u!114 &5086434402570310659
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5320924343380800234}
+  m_GameObject: {fileID: 5320924343367853630}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dbe526ef4e05428897cf8b9ae36936bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 3
-  baseDamage: 0
   gnomeAttacker: {fileID: 955028187815810532, guid: a6d218bccf2ae404ba9c01ceb277219f, type: 3}
   gnomeLimit: 5
 --- !u!1001 &6972594434867449727
@@ -210,11 +209,6 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 2960019225610239384, guid: 77e9e022b8dfb854494f6ebb1da45b9b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 77e9e022b8dfb854494f6ebb1da45b9b, type: 3}
---- !u!1 &5320924343380800234 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2960019225610239381, guid: 77e9e022b8dfb854494f6ebb1da45b9b, type: 3}
-  m_PrefabInstance: {fileID: 6972594434867449727}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5320924343380800235 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2960019225610239380, guid: 77e9e022b8dfb854494f6ebb1da45b9b, type: 3}

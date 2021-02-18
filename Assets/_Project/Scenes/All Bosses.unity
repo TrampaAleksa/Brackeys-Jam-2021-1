@@ -2849,6 +2849,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ice Golem
       objectReference: {fileID: 0}
+    - target: {fileID: 1713997132836999258, guid: f71ab95d9c3f66145b39f60475290336, type: 3}
+      propertyPath: m_Radius
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1713997132836999258, guid: f71ab95d9c3f66145b39f60475290336, type: 3}
+      propertyPath: m_ObstacleAvoidanceType
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1713997132836999261, guid: f71ab95d9c3f66145b39f60475290336, type: 3}
       propertyPath: m_RootOrder
       value: 1
