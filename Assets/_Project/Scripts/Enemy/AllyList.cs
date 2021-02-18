@@ -6,6 +6,7 @@ public class AllyList : MonoBehaviour
 {
     public static AllyList Instance;
     public static Action allyDiedEvent;
+    public static Action combatEndedEvent;
     
     public List<Ally> allies;
     private GameObject _player;
@@ -59,6 +60,7 @@ public class AllyList : MonoBehaviour
     public void ExitAllyCombat()
     {
         allyDiedEvent = null;
+        combatEndedEvent?.Invoke();
 
         for (int i = 0; i < allies.Count; i++)
         {

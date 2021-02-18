@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,18 +9,20 @@ public class ManaFromBoss : MonoBehaviour
     Transform playerTransform;
     Transform projectile;
     [SerializeField] float speedOfProjectile;
-    [SerializeField] float maxMana;
     [SerializeField] float ammountOfMana;
     ManaPool manaPool;
-    // Start is called before the first frame update
     void Awake()
     {
-        manaPool = ManaPool.Instance;
         player = GameObject.FindGameObjectWithTag("Player");
         playerTransform = player.transform;
         projectile = transform;
     }
-    // Update is called once per frame
+
+    private void Start()
+    {
+        manaPool = ManaPool.Instance;
+    }
+
     void Update()
     {
         
@@ -30,9 +33,7 @@ public class ManaFromBoss : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            if ((manaPool.remainingMana + ammountOfMana) > maxMana)
-                manaPool.remainingMana = maxMana;
-            else manaPool.AddMana(ammountOfMana);
+            manaPool.AddMana(ammountOfMana);
             Destroy(gameObject);
         }
     }
