@@ -6,9 +6,11 @@ public class RetreatAlly : MonoBehaviour
 {
     Camera mainCamera;
     Ally ally;
+    ManaPool manaPool;
     void Start()
     {
         mainCamera = Camera.main;
+        manaPool = ManaPool.Instance;
     }
 
     void Update()
@@ -21,9 +23,19 @@ public class RetreatAlly : MonoBehaviour
             {
                 if (hit.collider.gameObject.CompareTag("Ally"))
                 {
+                    
                     ally = hit.collider.GetComponent<Ally>();
-                    ally.movement.state = AllyMovementState.Retreating;
-                    print("Did Hit");
+                    if (manaPool.remainingMana >= manaPool.resurrectionCost)
+                    {
+                        if (ally.movement.state == AllyMovementState.InBattle)
+                        {
+                            ally.movement.state = AllyMovementState.Retreating;
+                            manaPool.remainingMana -= manaPool.resurrectionCost;
+                            print("Did Hit");
+                        }
+                        else print("Already retreating");
+                    }else print("Not enough mana");
+                    
                 }
             }
         }
