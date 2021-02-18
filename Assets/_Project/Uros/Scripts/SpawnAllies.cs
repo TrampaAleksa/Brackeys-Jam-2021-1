@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -21,6 +22,14 @@ public class SpawnAllies : MonoBehaviour
     [SerializeField] float timeTillSpawn = 4f;
     GameObject ally;
     AllyList allyList;
+
+    private GameObject _player;
+
+    private void Awake()
+    {
+        _player = GameObject.FindWithTag("Player");
+    }
+
     void Start()
     {
        
@@ -41,7 +50,7 @@ public class SpawnAllies : MonoBehaviour
             if (!IsMouseOverUI() && Input.GetMouseButtonDown(0))
                 ChangeButtosActivity();
             if (spawningObject != null)
-                actualDistance = Vector3.Distance(gameObject.transform.position, spawningPlace.position);
+                actualDistance = Vector3.Distance(_player.transform.position, spawningPlace.position);
             if (allowedDistanceToSpawn <= actualDistance)
             {
                 ChangeButtosActivity();
@@ -57,7 +66,7 @@ public class SpawnAllies : MonoBehaviour
                 {
                     spawningObject = hit.collider.gameObject;
                     spawningPlace = spawningObject.transform;
-                    actualDistance = Vector3.Distance(gameObject.transform.position, spawningPlace.position);
+                    actualDistance = Vector3.Distance(_player.transform.position, spawningPlace.position);
                     print(actualDistance);                
                     if (allowedDistanceToSpawn >= actualDistance)
                     {
