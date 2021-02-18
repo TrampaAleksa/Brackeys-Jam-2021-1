@@ -12,6 +12,8 @@ public class AllyList : MonoBehaviour
 
     private void Awake()
     {
+        if (allies == null) allies = new List<Ally>();
+        
         Instance = this;
         _player = GameObject.FindWithTag("Player");
     }
@@ -49,12 +51,15 @@ public class AllyList : MonoBehaviour
             allies[i].movement.target = boss.gameObject;
             allies[i].movement.state = AllyMovementState.InBattle;
         }
-
+        
+        allyDiedEvent += boss.GetComponentInChildren<EnemyAi>().TargetKilled;
         boss.GetComponentInChildren<EnemyAi>().enabled = true;
     }
 
     public void ExitAllyCombat()
     {
+        allyDiedEvent = null;
+
         for (int i = 0; i < allies.Count; i++)
         {
             allies[i].movement.target = _player.gameObject;

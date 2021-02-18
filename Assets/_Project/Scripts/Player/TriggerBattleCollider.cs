@@ -11,7 +11,6 @@ public class TriggerBattleCollider : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {       
-            other.GetComponent<RetreatAlly>().enabled = true;
             AllyList.Instance.TriggerAllyCombat(boss);
         }
     }

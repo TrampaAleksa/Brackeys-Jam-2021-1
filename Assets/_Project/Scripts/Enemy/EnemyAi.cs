@@ -22,7 +22,6 @@ public class EnemyAi : MonoBehaviour
         navMeshAgent = GetComponent<NavMeshAgent>();
         meleeAttack = GetComponent<Attack>();
         _transform = transform;
-        AllyList.allyDiedEvent += TargetKilled;
     }
 
     private void Start()
@@ -80,7 +79,7 @@ public class EnemyAi : MonoBehaviour
         attackInCooldown = false;
     }
 
-    private void TargetKilled()
+    public void TargetKilled()
     {
         currentTarget = FirstAllyInList();
     }

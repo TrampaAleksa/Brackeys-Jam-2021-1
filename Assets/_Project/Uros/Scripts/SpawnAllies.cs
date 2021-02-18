@@ -21,12 +21,12 @@ public class SpawnAllies : MonoBehaviour
     private void Awake()
     {
         _player = GameObject.FindWithTag("Player");
-        manaPool = ManaPool.Instance;
     }
 
     void Start()
     {
         mainCamera = Camera.main;
+        manaPool = ManaPool.Instance;
     }
 
     private void Update()
