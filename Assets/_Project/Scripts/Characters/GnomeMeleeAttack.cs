@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class GnomeAttackerAttack : Attack
+public class GnomeMeleeAttack : Attack
 {
     public override void LaunchAttack(Transform target)
     {
