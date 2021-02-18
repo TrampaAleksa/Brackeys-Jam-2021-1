@@ -2952,10 +2952,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gnome Leader
       objectReference: {fileID: 0}
-    - target: {fileID: 6972594434867449722, guid: d3cd4c9d76dea164db9e6a8ce1d7e245, type: 3}
-      propertyPath: gnomeAttacker
-      value: 
-      objectReference: {fileID: 955028187815810532, guid: a6d218bccf2ae404ba9c01ceb277219f, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d3cd4c9d76dea164db9e6a8ce1d7e245, type: 3}
 --- !u!114 &5029780620592535329 stripped

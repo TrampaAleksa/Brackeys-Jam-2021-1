@@ -146,7 +146,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 3
   baseDamage: 0
-  gnomeAttacker: {fileID: 0}
+  gnomeAttacker: {fileID: 955028187815810532, guid: a6d218bccf2ae404ba9c01ceb277219f, type: 3}
+  gnomeLimit: 5
 --- !u!1001 &6972594434867449727
 PrefabInstance:
   m_ObjectHideFlags: 0
