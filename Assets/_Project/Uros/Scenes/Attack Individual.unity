@@ -817,29 +817,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4700025631896107901, guid: 61e1d5f07eeb5044380cad3f63c5fb3d, type: 3}
   m_PrefabInstance: {fileID: 4700025632660068813}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &764076721
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 764076719}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 331d88c9deba4a678d680957f5d1d48c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buttons:
-  - {fileID: 1447216135}
-  - {fileID: 1572235399}
-  - {fileID: 1799847013}
-  - {fileID: 1482300246}
-  buttonsObjects:
-  - {fileID: 1447216133}
-  - {fileID: 1572235397}
-  - {fileID: 1799847011}
-  - {fileID: 1482300244}
-  buttonsActive: 0
 --- !u!1 &802098461
 GameObject:
   m_ObjectHideFlags: 0
@@ -1459,6 +1436,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8a120c487f4ae54b8c3542fd1fb6209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  manaProjectile: {fileID: 0}
 --- !u!114 &1245095991
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2498,54 +2476,42 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 764076721, guid: 61e1d5f07eeb5044380cad3f63c5fb3d, type: 3}
+      propertyPath: buttons.Array.data[0]
+      value: 
+      objectReference: {fileID: 1447216135}
+    - target: {fileID: 764076721, guid: 61e1d5f07eeb5044380cad3f63c5fb3d, type: 3}
+      propertyPath: buttons.Array.data[1]
+      value: 
+      objectReference: {fileID: 1572235399}
+    - target: {fileID: 764076721, guid: 61e1d5f07eeb5044380cad3f63c5fb3d, type: 3}
+      propertyPath: buttons.Array.data[2]
+      value: 
+      objectReference: {fileID: 1799847013}
+    - target: {fileID: 764076721, guid: 61e1d5f07eeb5044380cad3f63c5fb3d, type: 3}
+      propertyPath: buttons.Array.data[3]
+      value: 
+      objectReference: {fileID: 1482300246}
+    - target: {fileID: 764076721, guid: 61e1d5f07eeb5044380cad3f63c5fb3d, type: 3}
+      propertyPath: buttonsObjects.Array.data[0]
+      value: 
+      objectReference: {fileID: 1447216133}
+    - target: {fileID: 764076721, guid: 61e1d5f07eeb5044380cad3f63c5fb3d, type: 3}
+      propertyPath: buttonsObjects.Array.data[1]
+      value: 
+      objectReference: {fileID: 1572235397}
+    - target: {fileID: 764076721, guid: 61e1d5f07eeb5044380cad3f63c5fb3d, type: 3}
+      propertyPath: buttonsObjects.Array.data[2]
+      value: 
+      objectReference: {fileID: 1799847011}
+    - target: {fileID: 764076721, guid: 61e1d5f07eeb5044380cad3f63c5fb3d, type: 3}
+      propertyPath: buttonsObjects.Array.data[3]
+      value: 
+      objectReference: {fileID: 1482300244}
     - target: {fileID: 4700025631896107874, guid: 61e1d5f07eeb5044380cad3f63c5fb3d, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 4700025631896107896, guid: 61e1d5f07eeb5044380cad3f63c5fb3d, type: 3}
-      propertyPath: buttons.Array.data[0]
-      value: 
-      objectReference: {fileID: 1447216135}
-    - target: {fileID: 4700025631896107896, guid: 61e1d5f07eeb5044380cad3f63c5fb3d, type: 3}
-      propertyPath: buttons.Array.data[1]
-      value: 
-      objectReference: {fileID: 1572235399}
-    - target: {fileID: 4700025631896107896, guid: 61e1d5f07eeb5044380cad3f63c5fb3d, type: 3}
-      propertyPath: buttons.Array.data[2]
-      value: 
-      objectReference: {fileID: 1799847013}
-    - target: {fileID: 4700025631896107896, guid: 61e1d5f07eeb5044380cad3f63c5fb3d, type: 3}
-      propertyPath: buttons.Array.data[3]
-      value: 
-      objectReference: {fileID: 1482300246}
-    - target: {fileID: 4700025631896107896, guid: 61e1d5f07eeb5044380cad3f63c5fb3d, type: 3}
-      propertyPath: necroRings.Array.data[0]
-      value: 
-      objectReference: {fileID: 6660224609416620768, guid: 65ad8e822dc907648918d909ed8254e3, type: 3}
-    - target: {fileID: 4700025631896107896, guid: 61e1d5f07eeb5044380cad3f63c5fb3d, type: 3}
-      propertyPath: necroRings.Array.data[1]
-      value: 
-      objectReference: {fileID: 3857721846358920497, guid: 19ecd12de94fcb2478ec9953d264b5ef, type: 3}
-    - target: {fileID: 4700025631896107896, guid: 61e1d5f07eeb5044380cad3f63c5fb3d, type: 3}
-      propertyPath: necroRings.Array.data[2]
-      value: 
-      objectReference: {fileID: 8349429891776113002, guid: 2fda2abae1476204bad74953283c1ab7, type: 3}
-    - target: {fileID: 4700025631896107896, guid: 61e1d5f07eeb5044380cad3f63c5fb3d, type: 3}
-      propertyPath: buttonsObjects.Array.data[0]
-      value: 
-      objectReference: {fileID: 1447216133}
-    - target: {fileID: 4700025631896107896, guid: 61e1d5f07eeb5044380cad3f63c5fb3d, type: 3}
-      propertyPath: buttonsObjects.Array.data[1]
-      value: 
-      objectReference: {fileID: 1572235397}
-    - target: {fileID: 4700025631896107896, guid: 61e1d5f07eeb5044380cad3f63c5fb3d, type: 3}
-      propertyPath: buttonsObjects.Array.data[2]
-      value: 
-      objectReference: {fileID: 1799847011}
-    - target: {fileID: 4700025631896107896, guid: 61e1d5f07eeb5044380cad3f63c5fb3d, type: 3}
-      propertyPath: buttonsObjects.Array.data[3]
-      value: 
-      objectReference: {fileID: 1482300244}
     - target: {fileID: 4700025631896107901, guid: 61e1d5f07eeb5044380cad3f63c5fb3d, type: 3}
       propertyPath: m_RootOrder
       value: 3

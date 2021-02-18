@@ -11,6 +11,7 @@ public class SpawnAllies : MonoBehaviour
     [SerializeField] GameObject[] necroRings;
     [SerializeField] GameObject[] allyTypes;
 
+    ManaPool manaPool;
     GameObject spawningObject;
     float actualDistance;
     bool buttonsActive = false;
@@ -20,6 +21,7 @@ public class SpawnAllies : MonoBehaviour
     private void Awake()
     {
         _player = GameObject.FindWithTag("Player");
+        manaPool = ManaPool.Instance;
     }
 
     void Start()
@@ -62,12 +64,17 @@ public class SpawnAllies : MonoBehaviour
 
     public void TaskOnClick(int index)
     {
-        SpawnAlliesUi.Instance.ChangeButtosActivity();
         
-        var spawnTarget = spawningObject.gameObject.GetComponent<SpawnTarget>();
-        if (spawnTarget.isSpawning) return;
+            SpawnAlliesUi.Instance.ChangeButtosActivity();
+        if (manaPool.remainingMana >= manaPool.resurrectionCost)
+        {
+            var spawnTarget = spawningObject.gameObject.GetComponent<SpawnTarget>();
+            if (spawnTarget.isSpawning) return;
 
-        spawnTarget.StartSpawning(allyTypes[index], necroRings[index]);
+            spawnTarget.StartSpawning(allyTypes[index], necroRings[index]);
+            manaPool.CastedResurrection();
+        }
+        else print("Not enough mana for resurrection");
     }
 
     bool IsMouseOverUI()

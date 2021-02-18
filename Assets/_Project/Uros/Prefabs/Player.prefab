@@ -95,6 +95,8 @@ GameObject:
   - component: {fileID: 4700025631896107903}
   - component: {fileID: 4700025631896107897}
   - component: {fileID: 4700025631896107896}
+  - component: {fileID: 764076721}
+  - component: {fileID: 764076722}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -186,6 +188,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ddf549d2a1deea4396fe47ed7c1154d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  allowedDistanceToSpawn: 10
+  necroRings:
+  - {fileID: 6660224609416620768, guid: 65ad8e822dc907648918d909ed8254e3, type: 3}
+  - {fileID: 3857721846358920497, guid: 19ecd12de94fcb2478ec9953d264b5ef, type: 3}
+  - {fileID: 8349429891776113002, guid: 2fda2abae1476204bad74953283c1ab7, type: 3}
+  - {fileID: 6660224609416620768, guid: 65ad8e822dc907648918d909ed8254e3, type: 3}
+  allyTypes:
+  - {fileID: 2054613011753863721, guid: b26a3f50b6d61c641b235962e424dba9, type: 3}
+  - {fileID: 1350203507952716984, guid: 64f04f29304992a4c94a83533aa4d4f4, type: 3}
+  - {fileID: 6522283556658524635, guid: 571d4e313f74d41458a90f053533d586, type: 3}
+  - {fileID: 1350203507952716984, guid: 64f04f29304992a4c94a83533aa4d4f4, type: 3}
+--- !u!114 &764076721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4700025631896107874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 331d88c9deba4a678d680957f5d1d48c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   buttons:
   - {fileID: 0}
   - {fileID: 0}
@@ -196,18 +221,22 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  allowedDistanceToSpawn: 10
-  necroRings:
-  - {fileID: 3857721846358920497, guid: 19ecd12de94fcb2478ec9953d264b5ef, type: 3}
-  - {fileID: 6660224609416620768, guid: 65ad8e822dc907648918d909ed8254e3, type: 3}
-  - {fileID: 3857721846358920497, guid: 19ecd12de94fcb2478ec9953d264b5ef, type: 3}
-  - {fileID: 6660224609416620768, guid: 65ad8e822dc907648918d909ed8254e3, type: 3}
-  allyTypes:
-  - {fileID: 2054613011753863721, guid: b26a3f50b6d61c641b235962e424dba9, type: 3}
-  - {fileID: 1350203507952716984, guid: 64f04f29304992a4c94a83533aa4d4f4, type: 3}
-  - {fileID: 6522283556658524635, guid: 571d4e313f74d41458a90f053533d586, type: 3}
-  - {fileID: 1350203507952716984, guid: 64f04f29304992a4c94a83533aa4d4f4, type: 3}
-  timeTillSpawn: 3.5
+  buttonsActive: 0
+--- !u!114 &764076722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4700025631896107874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33738d4d6e620814dbed029e5c347901, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  remainingMana: 100
+  resurrectionCost: 30
+  retreatCost: 20
 --- !u!1 &4700025632346760694
 GameObject:
   m_ObjectHideFlags: 0
