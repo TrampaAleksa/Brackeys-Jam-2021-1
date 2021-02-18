@@ -1,6 +1,8 @@
-﻿public class EarthGolemHitDetector : AttackHitDetector
+﻿using UnityEngine;
+public class EarthGolemHitDetector : AttackHitDetector
 {
     private Health _health;
+    [SerializeField] GameObject manaProjectile;
 
     private void Awake()
     {
@@ -15,6 +17,7 @@
         if (_health.currentHealth <= 0.001f)
         {
             AllyList.Instance.ExitAllyCombat();
+            Instantiate(manaProjectile, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }

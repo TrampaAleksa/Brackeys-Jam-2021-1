@@ -179,6 +179,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fd7b1b3fe8c47c4bf2abe751d75a532, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  manaProjectile: {fileID: 1328167427046194470, guid: fe10c3789b9c7d743b81b0c075f1ba30, type: 3}
 --- !u!114 &7201636235834849175
 MonoBehaviour:
   m_ObjectHideFlags: 0

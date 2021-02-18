@@ -150,6 +150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8a120c487f4ae54b8c3542fd1fb6209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  manaProjectile: {fileID: 1328167427046194470, guid: fe10c3789b9c7d743b81b0c075f1ba30, type: 3}
 --- !u!54 &1713997132836999254
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -7,6 +7,7 @@ public class IceGolemHitDetector : AttackHitDetector
 {
     private float damageReduction = 0.2f;
     private Health _health;
+    [SerializeField] GameObject manaProjectile; 
 
     private void Awake()
     {
@@ -26,6 +27,7 @@ public class IceGolemHitDetector : AttackHitDetector
         if (_health.currentHealth <= 0.001f)
         {
             AllyList.Instance.ExitAllyCombat();
+            Instantiate(manaProjectile, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }

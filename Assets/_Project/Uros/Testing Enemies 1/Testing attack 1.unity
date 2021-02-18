@@ -123,6 +123,72 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 23800000, guid: e8f7b7223fed88e4abeb23cae54c7074, type: 2}
+--- !u!1001 &71308052
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1154437273}
+    m_Modifications:
+    - target: {fileID: 1350203507952716984, guid: 64f04f29304992a4c94a83533aa4d4f4, type: 3}
+      propertyPath: m_Name
+      value: Ice Mage (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1350203507952716990, guid: 64f04f29304992a4c94a83533aa4d4f4, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1350203507952716990, guid: 64f04f29304992a4c94a83533aa4d4f4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 10.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 1350203507952716990, guid: 64f04f29304992a4c94a83533aa4d4f4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5808348
+      objectReference: {fileID: 0}
+    - target: {fileID: 1350203507952716990, guid: 64f04f29304992a4c94a83533aa4d4f4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 4.37
+      objectReference: {fileID: 0}
+    - target: {fileID: 1350203507952716990, guid: 64f04f29304992a4c94a83533aa4d4f4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1350203507952716990, guid: 64f04f29304992a4c94a83533aa4d4f4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1350203507952716990, guid: 64f04f29304992a4c94a83533aa4d4f4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1350203507952716990, guid: 64f04f29304992a4c94a83533aa4d4f4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1350203507952716990, guid: 64f04f29304992a4c94a83533aa4d4f4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1350203507952716990, guid: 64f04f29304992a4c94a83533aa4d4f4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1350203507952716990, guid: 64f04f29304992a4c94a83533aa4d4f4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1350203507966842977, guid: 64f04f29304992a4c94a83533aa4d4f4, type: 3}
+      propertyPath: projectileSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 64f04f29304992a4c94a83533aa4d4f4, type: 3}
+--- !u!4 &71308053 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1350203507952716990, guid: 64f04f29304992a4c94a83533aa4d4f4, type: 3}
+  m_PrefabInstance: {fileID: 71308052}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &336285816
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1202,6 +1268,7 @@ Transform:
   - {fileID: 557546941}
   - {fileID: 2119369863}
   - {fileID: 2054613010952313382}
+  - {fileID: 71308053}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1280,6 +1347,7 @@ GameObject:
   - component: {fileID: 1245095992}
   - component: {fileID: 1245095994}
   - component: {fileID: 1245095989}
+  - component: {fileID: 1245095993}
   m_Layer: 0
   m_Name: Ice Golem
   m_TagString: Untagged
@@ -1415,6 +1483,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8a120c487f4ae54b8c3542fd1fb6209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  manaProjectile: {fileID: 1328167427046194470, guid: fe10c3789b9c7d743b81b0c075f1ba30, type: 3}
 --- !u!114 &1245095991
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1445,6 +1514,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1245095993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1245095983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6728a7fa01147af98f34cdcb42e8373, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 0
+  baseDamage: 0
+  projectileObj: {fileID: 0}
+  projectileSpeed: 3
 --- !u!114 &1245095994
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2404,6 +2489,10 @@ PrefabInstance:
     - target: {fileID: 4700025631896107874, guid: 61e1d5f07eeb5044380cad3f63c5fb3d, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 4700025631896107896, guid: 61e1d5f07eeb5044380cad3f63c5fb3d, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4700025631896107896, guid: 61e1d5f07eeb5044380cad3f63c5fb3d, type: 3}
       propertyPath: buttons.Array.data[0]
