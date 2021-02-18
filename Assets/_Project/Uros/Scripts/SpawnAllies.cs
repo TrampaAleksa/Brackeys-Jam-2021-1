@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.EventSystems;
 public class SpawnAllies : MonoBehaviour
 {
     [SerializeField] Button[] buttons;
@@ -36,6 +36,17 @@ public class SpawnAllies : MonoBehaviour
 
     private void Update()
     {
+        if (buttonsActive)
+        {
+            if (!IsMouseOverUI() && Input.GetMouseButtonDown(0))
+                ChangeButtosActivity();
+            if (spawningObject != null)
+                actualDistance = Vector3.Distance(gameObject.transform.position, spawningPlace.position);
+            if (allowedDistanceToSpawn <= actualDistance)
+            {
+                ChangeButtosActivity();
+            }
+        }
         if (Input.GetMouseButtonDown(0))
         {
             Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
@@ -55,15 +66,7 @@ public class SpawnAllies : MonoBehaviour
                 }
             }
         }
-        if (buttonsActive)
-        {
-            if (spawningObject != null)
-                actualDistance = Vector3.Distance(gameObject.transform.position, spawningPlace.position);
-            if (allowedDistanceToSpawn <= actualDistance || Input.GetMouseButtonDown(1))
-            {
-                ChangeButtosActivity();
-            }
-        }
+        
         if (startSpawning)
         {
             elapsedTime += Time.deltaTime;
@@ -72,7 +75,6 @@ public class SpawnAllies : MonoBehaviour
                 SpawnAlly();
             }
         }
-        
     }
     public void TaskOnClick(int index)
     {
@@ -107,8 +109,8 @@ public class SpawnAllies : MonoBehaviour
         elapsedTime = 0;
         startSpawning = false;
     }
-    private void OnMouseEnter()
+    bool IsMouseOverUI()
     {
-        
+        return EventSystem.current.IsPointerOverGameObject();
     }
 }
