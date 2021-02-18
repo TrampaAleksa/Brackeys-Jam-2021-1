@@ -63,7 +63,7 @@ public class SpawnAllies : MonoBehaviour
     public void TaskOnClick(int index)
     {
         SpawnAlliesUi.Instance.ChangeButtosActivity();
-
+        
         var spawnTarget = spawningObject.gameObject.GetComponent<SpawnTarget>();
         if (spawnTarget.isSpawning) return;
 
