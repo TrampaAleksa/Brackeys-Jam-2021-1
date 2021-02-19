@@ -1,9 +1,12 @@
 ﻿using UnityEngine;
 public class SpiderHitDetector : AttackHitDetector
 {
+    [SerializeField] GameObject manaProjectile;
+    [SerializeField] GameObject colllider;
+
     private float damageReduction = 0.2f;
     private Health _health;
-    [SerializeField] GameObject manaProjectile;
+    
     private void Awake()
     {
         _health = GetComponent<Health>();
@@ -22,6 +25,7 @@ public class SpiderHitDetector : AttackHitDetector
         if (_health.currentHealth <= 0.001f)
         {
             AllyList.Instance.ExitAllyCombat();
+            colllider.SetActive(false);
             Instantiate(manaProjectile, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }

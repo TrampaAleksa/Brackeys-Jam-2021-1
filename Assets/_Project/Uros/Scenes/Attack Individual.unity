@@ -1579,8 +1579,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8a120c487f4ae54b8c3542fd1fb6209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manaProjectile: {fileID: 1571364179232838803, guid: f48448cd2b98b4b47b87020127496148, type: 3}
-  emptyGameObject: {fileID: 5987201294286731262, guid: b1b8b376e502a824ca61e219b0da6105, type: 3}
+  manaProjectile: {fileID: 5514794713876390552, guid: 3b2380c700127ed479b6c8a30986ac33, type: 3}
   colllider: {fileID: 1930868107}
 --- !u!114 &1245095991
 MonoBehaviour:
