@@ -56,4 +56,25 @@ public class AudioHolder : MonoBehaviour
                 warriorAttackIce.Play();
         }
     }
+
+    public void PlayGnomeAttackSound()
+    {
+        if (!gnomeAttack1.isPlaying) gnomeAttack1.Play();
+    }
+
+    public void PlayMageSpellSound()
+    {
+        int rand = Random.Range(0, 100);
+
+        if (mageSpellcast1.isPlaying || mageSpellcast2.isPlaying) return;
+
+        if (rand <= 50)
+        {
+            mageSpellcast1.Play();
+        }
+        else
+        {
+            mageSpellcast2.Play();
+        }
+    }
 }

@@ -2161,6 +2161,10 @@ PrefabInstance:
       propertyPath: m_ObstacleAvoidanceType
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7696892990781978824, guid: 27525b923e9ebe544bb9a37146b8f8fb, type: 3}
+      propertyPath: colllider
+      value: 
+      objectReference: {fileID: 1930868107}
     - target: {fileID: 7696892990781978828, guid: 27525b923e9ebe544bb9a37146b8f8fb, type: 3}
       propertyPath: m_Name
       value: Reaper
@@ -2995,6 +2999,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ice Golem
       objectReference: {fileID: 0}
+    - target: {fileID: 1713997132836999256, guid: f71ab95d9c3f66145b39f60475290336, type: 3}
+      propertyPath: colllider
+      value: 
+      objectReference: {fileID: 1930868107}
     - target: {fileID: 1713997132836999258, guid: f71ab95d9c3f66145b39f60475290336, type: 3}
       propertyPath: m_Radius
       value: 0.5
@@ -3921,6 +3929,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Earth Golem
       objectReference: {fileID: 0}
+    - target: {fileID: 6482713070247740372, guid: 09a6336d99f517847b2a7aa5fddab053, type: 3}
+      propertyPath: colllider
+      value: 
+      objectReference: {fileID: 1930868107}
     - target: {fileID: 6482713070247740378, guid: 09a6336d99f517847b2a7aa5fddab053, type: 3}
       propertyPath: m_ObstacleAvoidanceType
       value: 0
@@ -4805,6 +4817,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7201636235834849172, guid: 19246bc44f95f31478cceeefeff3a5fa, type: 3}
+      propertyPath: colllider
+      value: 
+      objectReference: {fileID: 1930868107}
     - target: {fileID: 7201636235834849174, guid: 19246bc44f95f31478cceeefeff3a5fa, type: 3}
       propertyPath: m_Name
       value: Spider

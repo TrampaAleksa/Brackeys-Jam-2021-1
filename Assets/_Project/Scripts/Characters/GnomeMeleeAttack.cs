@@ -7,5 +7,6 @@ public class GnomeMeleeAttack : Attack
         base.LaunchAttack(target);
         print("Launching small melee attack!");
         target.GetComponentInChildren<AttackHitDetector>().HitByAttack(type, baseDamage);
+        AudioHolder.Instance.PlayGnomeAttackSound();
     }
 }
