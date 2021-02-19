@@ -2145,7 +2145,8 @@ PrefabInstance:
       propertyPath: projectileSpeed
       value: 6
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3337238029604150631, guid: b26a3f50b6d61c641b235962e424dba9, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b26a3f50b6d61c641b235962e424dba9, type: 3}
 --- !u!114 &1783620094 stripped
 MonoBehaviour:

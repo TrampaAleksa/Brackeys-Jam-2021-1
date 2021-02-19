@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 6522283556658524633}
   - component: {fileID: 6522283556658524634}
   - component: {fileID: 2756077644211343378}
-  - component: {fileID: 3024751692792652740}
   m_Layer: 0
   m_Name: Warrior
   m_TagString: Ally
@@ -135,21 +134,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &2756077644211343378
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6522283556658524635}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5600179af8f20aa419d80d3ce791920c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healingAmount: 5
-  healPrefab: {fileID: 1175529831686281850, guid: 2d744808377ab11438841a2b395a89b0, type: 3}
-  spawnHealEvery: 0.7
---- !u!114 &3024751692792652740
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
