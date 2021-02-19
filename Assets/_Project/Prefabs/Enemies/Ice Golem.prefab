@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 1713997132836999254}
   - component: {fileID: 1713997132836999252}
   - component: {fileID: 1713997132836999259}
+  - component: {fileID: 1440021695098534913}
   m_Layer: 0
   m_Name: Ice Golem
   m_TagString: Untagged
@@ -151,6 +152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   manaProjectile: {fileID: 1328167427046194470, guid: fe10c3789b9c7d743b81b0c075f1ba30, type: 3}
+  colllider: {fileID: 0}
 --- !u!54 &1713997132836999254
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -197,3 +199,16 @@ MonoBehaviour:
   spikeObj: {fileID: 9190190045878889830, guid: 086b03c364f82034ab28f0946a0613a4, type: 3}
   numberOfSpikes: 3
   rangeBetweenSpikes: 4
+--- !u!114 &1440021695098534913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1713997132836999233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed63fb67d7344d349d9d66181135c161, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  laughAfterHits: 13

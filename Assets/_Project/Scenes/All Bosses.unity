@@ -304,24 +304,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeTillSpawn: 4
   isSpawning: 0
---- !u!1 &181079275 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1713997132836999233, guid: f71ab95d9c3f66145b39f60475290336, type: 3}
-  m_PrefabInstance: {fileID: 1399710607}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &181079276
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 181079275}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed63fb67d7344d349d9d66181135c161, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  laughAfterHits: 13
 --- !u!1001 &293082633
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2124,11 +2106,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &975835428 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 975835428, guid: e2e4deb25ebdc42449a8b13d37c55ce4, type: 3}
-  m_PrefabInstance: {fileID: 4455582661183842946}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &992520126
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5219,10 +5196,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Audio Holder
       objectReference: {fileID: 0}
-    - target: {fileID: 4455582661373602225, guid: e2e4deb25ebdc42449a8b13d37c55ce4, type: 3}
-      propertyPath: iceGolemAttack
-      value: 
-      objectReference: {fileID: 975835428}
     - target: {fileID: 4455582661373602230, guid: e2e4deb25ebdc42449a8b13d37c55ce4, type: 3}
       propertyPath: m_RootOrder
       value: 12

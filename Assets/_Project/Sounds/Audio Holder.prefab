@@ -1713,6 +1713,7 @@ MonoBehaviour:
   earthGolemDeath: {fileID: 4455582660660398391}
   earthGolemGrowl: {fileID: 4455582660669738715}
   golemLaugh: {fileID: 4455582661386826065}
+  iceGolemAttack: {fileID: 975835428}
   reaperAttack: {fileID: 4455582659934835468}
   tornadoSounds: {fileID: 4455582661721557775}
   battleStart: {fileID: 4455582661025404589}
