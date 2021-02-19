@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 2054613011753863722}
   - component: {fileID: 2054613011753863723}
   - component: {fileID: 2054613011753863720}
-  - component: {fileID: 4056832233625889184}
   - component: {fileID: 3337238029604150631}
   m_Layer: 0
   m_Name: Fire Mage
@@ -134,21 +133,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80d960f221624d1fb39ce4a6b1ec0191, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &4056832233625889184
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2054613011753863721}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5600179af8f20aa419d80d3ce791920c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healingAmount: 5
-  healPrefab: {fileID: 1175529831686281850, guid: 2d744808377ab11438841a2b395a89b0, type: 3}
-  spawnHealEvery: 0.7
 --- !u!114 &3337238029604150631
 MonoBehaviour:
   m_ObjectHideFlags: 0
