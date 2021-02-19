@@ -5192,6 +5192,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4458831065400660809, guid: 031a50598517f224baf891497a2393f8, type: 3}
+      propertyPath: necroRings.Array.data[3]
+      value: 
+      objectReference: {fileID: 3857721846358920497, guid: 5a0fc816b1865704f87e0058cdfe6ad2, type: 3}
     - target: {fileID: 7277373593444967728, guid: 031a50598517f224baf891497a2393f8, type: 3}
       propertyPath: m_Pivot.x
       value: 0

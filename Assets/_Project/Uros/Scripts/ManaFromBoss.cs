@@ -24,8 +24,7 @@ public class ManaFromBoss : MonoBehaviour
     }
 
     void Update()
-    {
-        
+    {        
         projectile.LookAt(playerTransform);
         projectile.position += projectile.forward * (speedOfProjectile * Time.deltaTime);
     }

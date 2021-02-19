@@ -6,11 +6,8 @@ using UnityEngine;
 public class IceGolemHitDetector : AttackHitDetector
 {
     [SerializeField] GameObject manaProjectile;
-    [SerializeField] GameObject emptyGameObject;
     [SerializeField] GameObject colllider;
 
-    GameObject manaObj;
-    GameObject emptyObj;
     private float damageReduction = 0.2f;
     private Health _health;
 
@@ -33,6 +30,7 @@ public class IceGolemHitDetector : AttackHitDetector
         {
             AllyList.Instance.ExitAllyCombat();
             colllider.SetActive(false);
+            Instantiate(manaProjectile, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }
