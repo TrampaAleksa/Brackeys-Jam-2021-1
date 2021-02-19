@@ -7,6 +7,7 @@ public class IceGolemHitDetector : AttackHitDetector
 {
     [SerializeField] GameObject manaProjectile;
     [SerializeField] GameObject emptyGameObject;
+    [SerializeField] GameObject colllider;
 
     GameObject manaObj;
     GameObject emptyObj;
@@ -31,14 +32,8 @@ public class IceGolemHitDetector : AttackHitDetector
         if (_health.currentHealth <= 0.001f)
         {
             AllyList.Instance.ExitAllyCombat();
-            spawnMana();           
+            colllider.SetActive(false);
             Destroy(gameObject);
         }
-    }
-    void spawnMana()
-    {
-        emptyObj = Instantiate(emptyGameObject, transform.position, Quaternion.identity);
-        manaObj = Instantiate(manaProjectile, transform.position, Quaternion.identity);
-        manaObj.transform.parent = emptyObj.transform;
     }
 }
