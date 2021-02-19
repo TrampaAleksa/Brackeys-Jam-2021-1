@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1350203507952716986}
   - component: {fileID: 1350203507952716985}
   - component: {fileID: 1353617259984043836}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ice Mage
   m_TagString: Ally
   m_Icon: {fileID: 0}
@@ -203,6 +203,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AllyComponents
       objectReference: {fileID: 0}
+    - target: {fileID: 2960019225610239381, guid: 77e9e022b8dfb854494f6ebb1da45b9b, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2960019225610239384, guid: 77e9e022b8dfb854494f6ebb1da45b9b, type: 3}
       propertyPath: type
       value: 1
@@ -225,9 +229,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1350203507966842989}
     m_Modifications:
+    - target: {fileID: 8610830643306480633, guid: 2784896ac0eb4dd45b2d99814a5406dc, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8610830643425900733, guid: 2784896ac0eb4dd45b2d99814a5406dc, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 8610830643496549954, guid: 2784896ac0eb4dd45b2d99814a5406dc, type: 3}
       propertyPath: m_Name
       value: Health Bar
+      objectReference: {fileID: 0}
+    - target: {fileID: 8610830643496549954, guid: 2784896ac0eb4dd45b2d99814a5406dc, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8610830643496549955, guid: 2784896ac0eb4dd45b2d99814a5406dc, type: 3}
       propertyPath: m_RootOrder
