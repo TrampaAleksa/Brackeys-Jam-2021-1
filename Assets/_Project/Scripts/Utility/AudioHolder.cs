@@ -78,10 +78,26 @@ public class AudioHolder : MonoBehaviour
         }
     }
 
-    public void PlayBossFight()
+    public void PlayBossFight(int index)
     {
-        bossFight2.Stop();
-        bossFight2.volume = 1f;
-        bossFight2.PlayDelayed(3f);
+        switch (index)
+        {
+            case 0: 
+                bossFight2.Stop();
+                bossFight2.volume = 1f;
+                bossFight2.PlayDelayed(3f);
+                break;
+            case 1: 
+                bossFight1.Stop();
+                bossFight1.volume = 1f;
+                bossFight1.PlayDelayed(3f);
+                break;
+            case 2: 
+                bossFight3.Stop();
+                bossFight3.volume = 1f;
+                bossFight3.PlayDelayed(3f);
+                break;
+        }
+      
     }
 }

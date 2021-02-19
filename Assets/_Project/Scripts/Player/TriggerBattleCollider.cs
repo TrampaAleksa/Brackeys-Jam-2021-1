@@ -16,7 +16,7 @@ public class TriggerBattleCollider : MonoBehaviour
             other.GetComponentInChildren<Heal>().inBatle = true;
             AudioHolder.Instance.battleStart.PlayDelayed(0.3f);
             AudioHolder.Instance.golemLaugh.Play();
-            AudioHolder.Instance.PlayBossFight();
+            AudioHolder.Instance.PlayBossFight(0);
         }
     }
     private void OnTriggerExit(Collider other)
