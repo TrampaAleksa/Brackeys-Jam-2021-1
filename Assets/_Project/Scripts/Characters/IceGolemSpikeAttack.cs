@@ -22,6 +22,7 @@ public class IceGolemSpikeAttack : Attack
         {
             var currentSpawnPosition = _golemTransform.forward * (3f * (i+1)) + _golemTransform.position + Vector3.down*0.6f;
             Instantiate(spikeObj, currentSpawnPosition, _golemTransform.rotation);
+            AudioHolder.Instance.iceGolemAttack.Play();
         }
     }
 }

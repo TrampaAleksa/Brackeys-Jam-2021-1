@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class AudioHolder : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class AudioHolder : MonoBehaviour
     public AudioSource earthGolemDeath;
     public AudioSource earthGolemGrowl;
     public AudioSource golemLaugh;
+    public AudioSource iceGolemAttack;
     public AudioSource reaperAttack;
     public AudioSource tornadoSounds;
     
@@ -31,6 +33,18 @@ public class AudioHolder : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+    }
+
+
+    public void PlayWarriorAttackSound()
+    {
+        int rand = Random.Range(0, 100);
+
+        if (rand <= 33)
+            warriorAttack1.Play();
+        else if (rand >= 66)
+            warriorAttack2.Play();
+        else warriorAttackIce.Play();
     }
     
     

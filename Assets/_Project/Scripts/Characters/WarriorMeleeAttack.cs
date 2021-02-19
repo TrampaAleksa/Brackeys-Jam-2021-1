@@ -7,5 +7,6 @@ public class WarriorMeleeAttack : Attack
         base.LaunchAttack(target);
         print("Launching melee attack!");
         target.GetComponentInChildren<AttackHitDetector>().HitByAttack(type, baseDamage);
+        AudioHolder.Instance.PlayWarriorAttackSound();
     }
 }
