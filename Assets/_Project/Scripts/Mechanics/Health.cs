@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,6 +7,8 @@ public class Health : MonoBehaviour
 {
     public float currentHealth;
     public float maxHealth;
+
+    public Action healthChanged;
 
     public virtual void TakeDamage(float damageAmount)
     {
@@ -15,7 +18,10 @@ public class Health : MonoBehaviour
         {
             currentHealth = 0;
             print(gameObject.name + " Died!");
+            return;
         }
+        
+        healthChanged?.Invoke();
     }
     
     public virtual void Heal(float healAmount)
@@ -23,6 +29,8 @@ public class Health : MonoBehaviour
         currentHealth += healAmount;
 
         if (currentHealth >= maxHealth) currentHealth = maxHealth;
+        healthChanged?.Invoke();
+
     }
 }
 
