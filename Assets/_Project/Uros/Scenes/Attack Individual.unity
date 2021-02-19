@@ -1545,7 +1545,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8a120c487f4ae54b8c3542fd1fb6209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manaProjectile: {fileID: 0}
+  manaProjectile: {fileID: 1571364179232838803, guid: f48448cd2b98b4b47b87020127496148, type: 3}
+  emptyGameObject: {fileID: 5987201294286731262, guid: b1b8b376e502a824ca61e219b0da6105, type: 3}
 --- !u!114 &1245095991
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1558,7 +1559,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0524277618e78840863b4ef240013fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 700
+  currentHealth: 1
   maxHealth: 700
 --- !u!54 &1245095992
 Rigidbody:

@@ -5,9 +5,13 @@ using UnityEngine;
 
 public class IceGolemHitDetector : AttackHitDetector
 {
+    [SerializeField] GameObject manaProjectile;
+    [SerializeField] GameObject emptyGameObject;
+
+    GameObject manaObj;
+    GameObject emptyObj;
     private float damageReduction = 0.2f;
     private Health _health;
-    [SerializeField] GameObject manaProjectile; 
 
     private void Awake()
     {
@@ -27,8 +31,14 @@ public class IceGolemHitDetector : AttackHitDetector
         if (_health.currentHealth <= 0.001f)
         {
             AllyList.Instance.ExitAllyCombat();
-            Instantiate(manaProjectile, transform.position, Quaternion.identity);
+            spawnMana();           
             Destroy(gameObject);
         }
+    }
+    void spawnMana()
+    {
+        emptyObj = Instantiate(emptyGameObject, transform.position, Quaternion.identity);
+        manaObj = Instantiate(manaProjectile, transform.position, Quaternion.identity);
+        manaObj.transform.parent = emptyObj.transform;
     }
 }
