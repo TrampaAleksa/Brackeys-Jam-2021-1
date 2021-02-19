@@ -9,7 +9,7 @@ public class ManaPool : MonoBehaviour
 
    public float remainingMana;
    public float healCost;
-   public float retreatCost;
+   public float resurretionCost;
 
    private void Awake()
    {
@@ -32,9 +32,9 @@ public class ManaPool : MonoBehaviour
       ReduceMana(healCost);
    }
    
-   public void CastedRetreat()
+   public void CastedResurretion()
    {
-      ReduceMana(retreatCost);
+      ReduceMana(resurretionCost);
    }
    
 }

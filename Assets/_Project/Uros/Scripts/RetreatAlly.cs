@@ -1,9 +1,11 @@
-﻿using System.Collections;
+﻿
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class RetreatAlly : MonoBehaviour
 {
+    /*
     Camera mainCamera;
     Ally ally;
     ManaPool manaPool;
@@ -39,4 +41,5 @@ public class RetreatAlly : MonoBehaviour
             }
         }
     }
+    */
 }

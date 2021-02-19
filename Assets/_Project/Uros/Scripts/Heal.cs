@@ -8,8 +8,8 @@ public class Heal : MonoBehaviour
     [SerializeField] float cooldown = 3f;
     [NonSerialized] public bool inBatle = false;
     [NonSerialized] public bool healingIsActive = false;
-    public static bool heal = false;
-        
+    
+    public static bool heal = false;       
     ManaPool manaPool;
     float elapsedSeconds;
     float elapsedSecondsForCooldown;
@@ -32,12 +32,13 @@ public class Heal : MonoBehaviour
                 inCooldown = false;
                 elapsedSecondsForCooldown = 0;
             }
+            else print(elapsedSecondsForCooldown);
         }
         if (healingIsActive)
         {
             if (elapsedSeconds < timeHealIsOn)
             {
-                print(elapsedSeconds);
+                //print(elapsedSeconds);
                 elapsedSeconds += Time.deltaTime;
             }
             else
@@ -54,7 +55,8 @@ public class Heal : MonoBehaviour
         if (inCooldown) return;
         if (healingIsActive) return;
         if (!inBatle) return;
-         healingIsActive = true;
-         sphereCollider.enabled = true;       
+        manaPool.CastedHeal();
+        healingIsActive = true;
+        sphereCollider.enabled = true;       
     }
 }
