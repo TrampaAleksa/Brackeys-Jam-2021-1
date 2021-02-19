@@ -18,6 +18,7 @@ public class EarthGolemWindAttack : Attack
         print("Launching spike attack!");
 
         Instantiate(windObj, transform);
+        AudioHolder.Instance.tornadoSounds.Play();
         _timedAction.StartTimedAction(DamageAllAllies, intervalOfDamage);
     }
 

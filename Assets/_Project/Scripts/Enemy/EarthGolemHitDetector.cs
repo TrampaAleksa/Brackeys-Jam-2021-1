@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using _Project.Scripts.Utility;
+using UnityEngine;
 public class EarthGolemHitDetector : AttackHitDetector
 {
     [SerializeField] GameObject manaProjectile;
@@ -20,6 +21,7 @@ public class EarthGolemHitDetector : AttackHitDetector
         {
             AllyList.Instance.ExitAllyCombat();
             colllider.SetActive(false);
+            new AudioSourceFader(AudioHolder.Instance.bossFight2, 4f, 0f).StartFading();
             Instantiate(manaProjectile, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
