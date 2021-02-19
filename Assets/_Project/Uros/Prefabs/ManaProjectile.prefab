@@ -108,7 +108,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aea0316a3d6cf4d4bbd9664e901a4353, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 4700025631896107901, guid: 61e1d5f07eeb5044380cad3f63c5fb3d, type: 3}
   speedOfProjectile: 3
-  maxMana: 100
-  ammountOfMana: 50
+  ammountOfMana: 170

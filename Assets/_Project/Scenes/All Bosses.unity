@@ -1550,7 +1550,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 764076719}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.9, y: 0.32, z: -298.4}
+  m_LocalPosition: {x: -4.9, y: 0.32, z: 106.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 905418113}
@@ -2139,6 +2139,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7696892990781978818, guid: 27525b923e9ebe544bb9a37146b8f8fb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7696892990781978822, guid: 27525b923e9ebe544bb9a37146b8f8fb, type: 3}
+      propertyPath: m_ObstacleAvoidanceType
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7696892990781978828, guid: 27525b923e9ebe544bb9a37146b8f8fb, type: 3}
@@ -3616,6 +3620,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Earth Golem
       objectReference: {fileID: 0}
+    - target: {fileID: 6482713070247740378, guid: 09a6336d99f517847b2a7aa5fddab053, type: 3}
+      propertyPath: m_ObstacleAvoidanceType
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6482713070247740382, guid: 09a6336d99f517847b2a7aa5fddab053, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -4443,6 +4451,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1484538515}
     m_Modifications:
+    - target: {fileID: 7201636235834849160, guid: 19246bc44f95f31478cceeefeff3a5fa, type: 3}
+      propertyPath: m_ObstacleAvoidanceType
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7201636235834849164, guid: 19246bc44f95f31478cceeefeff3a5fa, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -4880,18 +4892,6 @@ PrefabInstance:
     - target: {fileID: 7277373593444967756, guid: 031a50598517f224baf891497a2393f8, type: 3}
       propertyPath: m_Name
       value: Canvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 7277373593444967758, guid: 031a50598517f224baf891497a2393f8, type: 3}
-      propertyPath: m_UiScaleMode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7277373593444967758, guid: 031a50598517f224baf891497a2393f8, type: 3}
-      propertyPath: m_ReferenceResolution.x
-      value: 1280
-      objectReference: {fileID: 0}
-    - target: {fileID: 7277373593444967758, guid: 031a50598517f224baf891497a2393f8, type: 3}
-      propertyPath: m_ReferenceResolution.y
-      value: 720
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 031a50598517f224baf891497a2393f8, type: 3}
