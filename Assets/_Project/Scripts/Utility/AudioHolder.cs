@@ -77,4 +77,11 @@ public class AudioHolder : MonoBehaviour
             mageSpellcast2.Play();
         }
     }
+
+    public void PlayBossFight()
+    {
+        bossFight2.Stop();
+        bossFight2.volume = 1f;
+        bossFight2.PlayDelayed(3f);
+    }
 }

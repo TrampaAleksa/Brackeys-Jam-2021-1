@@ -5208,6 +5208,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 975835428, guid: e2e4deb25ebdc42449a8b13d37c55ce4, type: 3}
+      propertyPath: m_Volume
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4455582660358947464, guid: e2e4deb25ebdc42449a8b13d37c55ce4, type: 3}
+      propertyPath: m_Volume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4455582661025404589, guid: e2e4deb25ebdc42449a8b13d37c55ce4, type: 3}
+      propertyPath: m_Volume
+      value: 0.7
+      objectReference: {fileID: 0}
     - target: {fileID: 4455582661373602224, guid: e2e4deb25ebdc42449a8b13d37c55ce4, type: 3}
       propertyPath: m_Name
       value: Audio Holder
@@ -5255,6 +5267,14 @@ PrefabInstance:
     - target: {fileID: 4455582661373602230, guid: e2e4deb25ebdc42449a8b13d37c55ce4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4455582661662690808, guid: e2e4deb25ebdc42449a8b13d37c55ce4, type: 3}
+      propertyPath: m_Volume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4455582661761819717, guid: e2e4deb25ebdc42449a8b13d37c55ce4, type: 3}
+      propertyPath: m_Volume
+      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2e4deb25ebdc42449a8b13d37c55ce4, type: 3}

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using _Project.Scripts.Utility;
 using UnityEngine;
 
 public class IceGolemHitDetector : AttackHitDetector
@@ -31,6 +32,7 @@ public class IceGolemHitDetector : AttackHitDetector
             AllyList.Instance.ExitAllyCombat();
             colllider.SetActive(false);
             Instantiate(manaProjectile, transform.position, Quaternion.identity);
+            new AudioSourceFader(AudioHolder.Instance.bossFight2, 4f, 0f).StartFading();
             Destroy(gameObject);
         }
     }
