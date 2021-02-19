@@ -12,14 +12,14 @@ public class AudioHolder : MonoBehaviour
     public AudioSource gnomeAttack1;
     public AudioSource mageSpellcast1;
     public AudioSource mageSpellcast2;
-    
+
     public AudioSource earthGolemDeath;
     public AudioSource earthGolemGrowl;
     public AudioSource golemLaugh;
     public AudioSource iceGolemAttack;
     public AudioSource reaperAttack;
     public AudioSource tornadoSounds;
-    
+
     public AudioSource battleStart;
     public AudioSource bossFight1;
     public AudioSource bossFight2;
@@ -41,11 +41,19 @@ public class AudioHolder : MonoBehaviour
         int rand = Random.Range(0, 100);
 
         if (rand <= 33)
-            warriorAttack1.Play();
+        {
+            if (!warriorAttack1.isPlaying)
+                warriorAttack1.Play();
+        }
         else if (rand >= 66)
-            warriorAttack2.Play();
-        else warriorAttackIce.Play();
+        {
+            if (!warriorAttack2.isPlaying)
+                warriorAttack2.Play();
+        }
+        else
+        {
+            if (!warriorAttackIce.isPlaying)
+                warriorAttackIce.Play();
+        }
     }
-    
-    
 }
