@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using _Project.Scripts.Utility;
+using NUnit.Framework;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -42,15 +43,35 @@ public class AudioHolder : MonoBehaviour
 
     public static AudioHolder Instance;
 
+    private AudioSource[]  _sources;
+
     private void Awake()
     {
         Instance = this;
+        DontDestroyOnLoad(gameObject);
+        _sources = GetComponentsInChildren<AudioSource>();
     }
 
     private void Start()
     {
         TurnOnBackgroundMusic();
     }
+
+    public void PauseAllSounds()
+    {
+        foreach (var source in _sources)
+        {
+            source.Pause();
+        }
+    }
+    public void UnPauseAllSounds()
+    {
+        foreach (var source in _sources)
+        {
+            source.UnPause();
+        }
+    }
+    
 
 
     public void PlayWarriorAttackSound()
