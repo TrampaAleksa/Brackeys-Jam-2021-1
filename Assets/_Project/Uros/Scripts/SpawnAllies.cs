@@ -72,6 +72,7 @@ public class SpawnAllies : MonoBehaviour
             if (spawnTarget.isSpawning) return;
 
             spawnTarget.StartSpawning(allyTypes[index], necroRings[index]);
+            AudioHolder.Instance.PlayResurrectionSound();
             manaPool.CastedResurretion();
         }
         else print("Not enough mana for resurrection");

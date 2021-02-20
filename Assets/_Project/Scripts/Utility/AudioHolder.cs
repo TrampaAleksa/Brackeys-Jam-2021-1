@@ -30,6 +30,10 @@ public class AudioHolder : MonoBehaviour
     public AudioSource randomAmbientSound1;
     public AudioSource randomAmbientSound2;
 
+    public AudioSource resurrection1;
+    public AudioSource resurrection2;
+    public AudioSource resurrection3;
+
     public static AudioHolder Instance;
 
     private void Awake()
@@ -81,6 +85,7 @@ public class AudioHolder : MonoBehaviour
     }
 
     private AudioSource _currentBossMusic;
+
     public void PlayBossSounds(AttackType type)
     {
         switch (type)
@@ -100,7 +105,8 @@ public class AudioHolder : MonoBehaviour
                 golemLaugh.Play();
                 PlayBossFight(2);
                 break;
-            default: print("no boss type set, no sounds will be played");
+            default:
+                print("no boss type set, no sounds will be played");
                 break;
         }
     }
@@ -109,19 +115,19 @@ public class AudioHolder : MonoBehaviour
     {
         switch (index)
         {
-            case 0: 
+            case 0:
                 bossFight2.Stop();
                 bossFight2.volume = 1f;
                 bossFight2.PlayDelayed(3f);
                 _currentBossMusic = bossFight2;
                 break;
-            case 1: 
+            case 1:
                 bossFight1.Stop();
                 bossFight1.volume = 1f;
                 bossFight3.PlayDelayed(3f);
                 _currentBossMusic = bossFight3;
                 break;
-            case 2: 
+            case 2:
                 bossFight3.Stop();
                 bossFight3.volume = 1f;
                 bossFight3.PlayDelayed(2.3f);
@@ -133,5 +139,24 @@ public class AudioHolder : MonoBehaviour
     public void TurnOffBossMusic()
     {
         new AudioSourceFader(_currentBossMusic, 4f, 0f).StartFading();
+    }
+
+    public void PlayResurrectionSound()
+    {
+        int rand = Random.Range(0, 100);
+
+        if (rand <= 33)
+        {
+            resurrection1.Play();
+            return;
+        }
+
+        if (rand <= 66)
+        {
+            resurrection2.Play();
+            return;
+        }
+
+        resurrection3.Play();
     }
 }

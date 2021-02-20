@@ -5321,6 +5321,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 894899936, guid: e2e4deb25ebdc42449a8b13d37c55ce4, type: 3}
+      propertyPath: m_Pitch
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 894899936, guid: e2e4deb25ebdc42449a8b13d37c55ce4, type: 3}
+      propertyPath: m_Volume
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1614297416, guid: e2e4deb25ebdc42449a8b13d37c55ce4, type: 3}
+      propertyPath: m_Pitch
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1614297416, guid: e2e4deb25ebdc42449a8b13d37c55ce4, type: 3}
+      propertyPath: m_Volume
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2138402361, guid: e2e4deb25ebdc42449a8b13d37c55ce4, type: 3}
+      propertyPath: m_Pitch
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2138402361, guid: e2e4deb25ebdc42449a8b13d37c55ce4, type: 3}
+      propertyPath: m_Volume
+      value: 0.15
+      objectReference: {fileID: 0}
     - target: {fileID: 4455582661373602224, guid: e2e4deb25ebdc42449a8b13d37c55ce4, type: 3}
       propertyPath: m_Name
       value: Audio Holder
