@@ -18,7 +18,7 @@ public class ProjectileAttack : Attack
         base.LaunchAttack(target);
         
         print("Launching a projectile!");
-        Instantiate(projectileObj, _attackerTransform.position, _attackerTransform.rotation).ChaseTarget(target, projectileSpeed, type, baseDamage);
+        Instantiate(projectileObj, _attackerTransform.position, _attackerTransform.rotation, ProjectileHolder.Instance.projectileHolderTransform).ChaseTarget(target, projectileSpeed, type, baseDamage);
         AudioHolder.Instance.PlayMageSpellSound();
     }
 }

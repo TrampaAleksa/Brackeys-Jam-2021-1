@@ -9,6 +9,7 @@ public class Health : MonoBehaviour
     public float maxHealth;
 
     public Action healthChanged;
+    public Action<Health> died;
 
     public virtual void TakeDamage(float damageAmount)
     {
@@ -18,6 +19,7 @@ public class Health : MonoBehaviour
         {
             currentHealth = 0;
             print(gameObject.name + " Died!");
+            died?.Invoke(this);
             return;
         }
         

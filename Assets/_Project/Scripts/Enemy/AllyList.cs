@@ -48,6 +48,8 @@ public class AllyList : MonoBehaviour
 
     public void TriggerAllyCombat(Transform boss)
     {
+        boss.GetComponent<Health>().died += ProjectileHolder.Instance.BossDiedEvent;
+        
         for (int i = 0; i < allies.Count; i++)
         {
             allies[i].movement.target = boss.gameObject;
@@ -56,6 +58,7 @@ public class AllyList : MonoBehaviour
         
         allyDiedEvent += boss.GetComponentInChildren<EnemyAi>().TargetKilled;
         boss.GetComponentInChildren<EnemyAi>().enabled = true;
+ 
     }
 
     public void ExitAllyCombat()
