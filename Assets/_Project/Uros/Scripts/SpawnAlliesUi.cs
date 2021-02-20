@@ -22,7 +22,7 @@ public class SpawnAlliesUi : MonoBehaviour
         for (int i = 0; i < buttons.Length; i++)
         {
             int indexOfButton = i;
-           // buttons[indexOfButton].onClick.AddListener(() => _spawnAllies.TaskOnClick(indexOfButton));
+           buttons[indexOfButton].onClick.AddListener(() => _spawnAllies.TaskOnClick(indexOfButton));
         }
     }
 
