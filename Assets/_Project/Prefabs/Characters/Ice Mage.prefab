@@ -110,7 +110,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 1
   m_Speed: 8
-  m_Acceleration: 8
+  m_Acceleration: 5
   avoidancePriority: 50
   m_AngularSpeed: 270
   m_StoppingDistance: 11
@@ -155,6 +155,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1350203507952716990}
     m_Modifications:
+    - target: {fileID: 2915817860883152862, guid: 77e9e022b8dfb854494f6ebb1da45b9b, type: 3}
+      propertyPath: radiusInBattle
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 2915817860883152862, guid: 77e9e022b8dfb854494f6ebb1da45b9b, type: 3}
+      propertyPath: radiusOutOfBattle
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 2960019225610239380, guid: 77e9e022b8dfb854494f6ebb1da45b9b, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -215,6 +223,10 @@ PrefabInstance:
       propertyPath: projectileObj
       value: 
       objectReference: {fileID: 3767566601987113569, guid: 94581e382b5f265479f94f48f4efda8c, type: 3}
+    - target: {fileID: 2960019225610239385, guid: 77e9e022b8dfb854494f6ebb1da45b9b, type: 3}
+      propertyPath: attackTimeOffset
+      value: 1.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77e9e022b8dfb854494f6ebb1da45b9b, type: 3}
 --- !u!4 &1350203507966842989 stripped

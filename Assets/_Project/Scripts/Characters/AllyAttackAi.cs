@@ -1,9 +1,13 @@
 ﻿using System;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class AllyAttackAi : MonoBehaviour
 {
     public float timeBetweenAttacks;
+
+    public float attackTimeOffset;
+    
     [NonSerialized] public Ally ally;
     private bool attackInCooldown;
 
@@ -22,7 +26,7 @@ public class AllyAttackAi : MonoBehaviour
 
         attackInCooldown = true;
         ally.attack.LaunchAttack(ally.movement.target.transform);
-        gameObject.AddComponent<TimedAction>().StartTimedAction(FinishAttack, timeBetweenAttacks);
+        gameObject.AddComponent<TimedAction>().StartTimedAction(FinishAttack, timeBetweenAttacks + Random.Range(-attackTimeOffset, attackTimeOffset));
     }
 
     private void FinishAttack()
