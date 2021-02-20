@@ -48,6 +48,7 @@ public class AudioHolder : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+        DontDestroyOnLoad(gameObject);
         _sources = GetComponentsInChildren<AudioSource>();
     }
 
