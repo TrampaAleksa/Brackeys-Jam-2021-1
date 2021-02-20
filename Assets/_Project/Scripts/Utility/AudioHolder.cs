@@ -21,8 +21,11 @@ public class AudioHolder : MonoBehaviour
     public AudioSource reaperAttack;
     public AudioSource tornadoSounds;
     public AudioSource reaperLaughter;
+    public AudioSource spiderDeath;
+    public AudioSource spiderAttack;
 
     public AudioSource battleStart;
+    public AudioSource spiderBattleStart;
     public AudioSource bossFight1;
     public AudioSource bossFight2;
     public AudioSource bossFight3;
@@ -105,6 +108,11 @@ public class AudioHolder : MonoBehaviour
                 golemLaugh.Play();
                 PlayBossFight(2);
                 break;
+            case AttackType.Spider:
+                battleStart.PlayDelayed(0.3f);
+                golemLaugh.Play();
+                PlayBossFight(0);
+                break;
             default:
                 print("no boss type set, no sounds will be played");
                 break;
@@ -133,6 +141,7 @@ public class AudioHolder : MonoBehaviour
                 bossFight3.PlayDelayed(2.3f);
                 _currentBossMusic = bossFight3;
                 break;
+           
         }
     }
 
