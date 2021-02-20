@@ -12,6 +12,7 @@ public class TriggerBattleCollider : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {       
+            AllyList.Instance.SortByTypes(4,3,1,2);
             AllyList.Instance.TriggerAllyCombat(boss);
             other.GetComponentInChildren<Heal>().inBatle = true;
             AudioHolder.Instance.PlayBossSounds(bossType);

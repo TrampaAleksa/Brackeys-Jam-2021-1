@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class EarthGolemWindAttack : Attack
 {
@@ -6,10 +7,15 @@ public class EarthGolemWindAttack : Attack
     public float intervalOfDamage;
     
     private TimedAction _timedAction;
-
+    private AllyList _allyList;
     private void Awake()
     {
         _timedAction = gameObject.AddComponent<TimedAction>().DestroyOnFinish(false);
+    }
+
+    private void Start()
+    {
+        _allyList = AllyList.Instance;
     }
 
     public override void LaunchAttack(Transform target)
@@ -24,7 +30,7 @@ public class EarthGolemWindAttack : Attack
 
     private void DamageAllAllies()
     {
-        foreach (var ally in AllyList.Instance.allies)
+        foreach (var ally in _allyList.allies)
         {
             ally.hitDetector.HitByAttack(type, baseDamage);
         }

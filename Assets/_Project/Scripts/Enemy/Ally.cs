@@ -13,6 +13,8 @@ public class Ally : MonoBehaviour
 
     private AllyAttackAi _allyAttackAi;
 
+    [NonSerialized] public int weight;
+
     private void Awake()
     {
         attack = GetComponentInChildren<Attack>();

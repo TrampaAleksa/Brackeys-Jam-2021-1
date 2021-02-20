@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class AllyList : MonoBehaviour
@@ -67,5 +68,27 @@ public class AllyList : MonoBehaviour
             allies[i].movement.target = _player.gameObject;
             allies[i].movement.state = AllyMovementState.OutOfBattle;
         }
+    }
+
+
+    public void SortByTypes(int fireWeight, int iceWeight, int warriorWeight, int gnomeWeight)
+    {
+        foreach (var ally in allies)
+        {
+            switch (ally.attack.type)
+            {
+                case AttackType.Fire: ally.weight = fireWeight;
+                    break;
+                case AttackType.Ice: ally.weight = iceWeight;
+                    break;
+                case AttackType.Warrior: ally.weight = warriorWeight;
+                    break;
+                case AttackType.Gnome: ally.weight = gnomeWeight;
+                    break;
+            }
+        }
+
+        allies = allies.OrderBy((ally) => ally.weight).ToList();
+
     }
 }
