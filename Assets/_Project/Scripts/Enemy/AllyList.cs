@@ -65,6 +65,7 @@ public class AllyList : MonoBehaviour
     {
         allyDiedEvent = null;
         combatEndedEvent?.Invoke();
+        AudioHolder.Instance.TurnOffBossMusic();
 
         for (int i = 0; i < allies.Count; i++)
         {

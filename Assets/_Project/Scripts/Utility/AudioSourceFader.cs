@@ -25,7 +25,7 @@ namespace _Project.Scripts.Utility
         {
             var timedAction = AudioHolder.Instance.gameObject.AddComponent<TimedAction>();
             timedAction.AddTickAction(FadeTick);
-            timedAction.StartTimedAction(null, _duration);
+            timedAction.StartTimedAction(()=> _audioSource.volume = _targetVolume, _duration);
         }
 
         private void FadeTick()

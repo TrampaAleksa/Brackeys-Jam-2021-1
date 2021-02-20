@@ -25,7 +25,6 @@ public class SpiderHitDetector : AttackHitDetector
         if (_health.currentHealth <= 0.001f)
         {
             AudioHolder.Instance.spiderDeath.Play();
-            AudioHolder.Instance.TurnOffBossMusic();
             AllyList.Instance.ExitAllyCombat();
             colllider.SetActive(false);
             Instantiate(manaProjectile, transform.position, Quaternion.identity);

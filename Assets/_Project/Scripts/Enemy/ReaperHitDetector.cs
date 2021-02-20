@@ -15,7 +15,6 @@
         if (_health.currentHealth <= 0.001f)
         {
             AllyList.Instance.ExitAllyCombat();
-            AudioHolder.Instance.TurnOffBossMusic();
             AudioHolder.Instance.reaperDeath.Play();
             print("WON THE GAME");
             Destroy(gameObject);
