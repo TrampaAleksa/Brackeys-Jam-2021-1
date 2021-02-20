@@ -79,7 +79,31 @@ public class AudioHolder : MonoBehaviour
         }
     }
 
-    public void PlayBossFight(int index)
+    public void PlayBossSounds(AttackType type)
+    {
+        switch (type)
+        {
+            case AttackType.Reaper:
+                battleStart.PlayDelayed(0.3f);
+                reaperLaughter.Play();
+                PlayBossFight(1);
+                break;
+            case AttackType.Ice:
+                battleStart.PlayDelayed(0.3f);
+                golemLaugh.Play();
+                PlayBossFight(0);
+                break;
+            case AttackType.Wind:
+                battleStart.PlayDelayed(0.3f);
+                golemLaugh.Play();
+                PlayBossFight(2);
+                break;
+            default: print("no boss type set, no sounds will be played");
+                break;
+        }
+    }
+
+    private void PlayBossFight(int index)
     {
         switch (index)
         {
@@ -99,6 +123,5 @@ public class AudioHolder : MonoBehaviour
                 bossFight3.PlayDelayed(3f);
                 break;
         }
-      
     }
 }
