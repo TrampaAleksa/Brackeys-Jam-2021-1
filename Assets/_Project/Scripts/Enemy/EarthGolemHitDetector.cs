@@ -1,11 +1,12 @@
 ﻿using _Project.Scripts.Utility;
 using UnityEngine;
+
 public class EarthGolemHitDetector : AttackHitDetector
 {
     [SerializeField] GameObject manaProjectile;
     [SerializeField] GameObject colllider;
 
-    private Health _health;    
+    private Health _health;
 
     private void Awake()
     {
@@ -15,13 +16,13 @@ public class EarthGolemHitDetector : AttackHitDetector
     public override void HitByAttack(AttackType attackType, float baseAttackDamage)
     {
         _health.TakeDamage(baseAttackDamage);
-        print("Earth goldem took: " + baseAttackDamage +  " damage");
+        print("Earth goldem took: " + baseAttackDamage + " damage");
 
         if (_health.currentHealth <= 0.001f)
         {
             AllyList.Instance.ExitAllyCombat();
             colllider.SetActive(false);
-            new AudioSourceFader(AudioHolder.Instance.bossFight2, 4f, 0f).StartFading();
+            AudioHolder.Instance.TurnOffBossMusic();
             Instantiate(manaProjectile, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }

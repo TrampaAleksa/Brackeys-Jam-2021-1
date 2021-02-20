@@ -12,6 +12,7 @@ public class AllyMovement : MonoBehaviour
     [SerializeField] float retreatRadius = 1.5f;
 
     [NonSerialized] public Ally ally;
+
     
     private void Awake()
     {
@@ -39,7 +40,7 @@ public class AllyMovement : MonoBehaviour
 
     private void RetreatMovement()
     {
-        ally.navMeshAgent.SetDestination(player.transform.position);
+        CalculatePath(player.transform);
         ally.navMeshAgent.radius = retreatRadius;
         
         if (InAttackRange)
@@ -48,7 +49,7 @@ public class AllyMovement : MonoBehaviour
 
     private void InBattleMovement()
     {
-        ally.navMeshAgent.SetDestination(target.transform.position);
+        CalculatePath(target.transform);
         ally.navMeshAgent.radius = radiusInBattle;
         
         if (InAttackRange)
@@ -57,11 +58,21 @@ public class AllyMovement : MonoBehaviour
 
     private void OutOfCombatMovement()
     {
-        ally.navMeshAgent.SetDestination(player.transform.position);
+        CalculatePath(player.transform);
         ally.navMeshAgent.radius = radiusOutOfBattle;
         
         if (InAttackRange)
             transform.LookAt(player.transform);
+    }
+
+    private int _recalculateCounter;
+    private void CalculatePath(Transform destination)
+    {
+        if (_recalculateCounter% 5 == 0)
+        {
+            ally.navMeshAgent.SetDestination(destination.position);
+            _recalculateCounter = 0;
+        }
     }
     
     public bool InAttackRange => ally.navMeshAgent.remainingDistance < ally.navMeshAgent.stoppingDistance && ally.navMeshAgent.remainingDistance > 0.005f;

@@ -17,5 +17,6 @@ public class ReaperCleaveAttack : Attack
         print("Launching reap attack!");
 
         Instantiate(cleaveConeObj, _reaperTransform.position, _reaperTransform.rotation);
+        AudioHolder.Instance.reaperAttack.Play();
     }
 }

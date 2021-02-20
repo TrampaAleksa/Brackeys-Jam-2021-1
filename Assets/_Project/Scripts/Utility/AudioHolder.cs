@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using _Project.Scripts.Utility;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -19,6 +20,7 @@ public class AudioHolder : MonoBehaviour
     public AudioSource iceGolemAttack;
     public AudioSource reaperAttack;
     public AudioSource tornadoSounds;
+    public AudioSource reaperLaughter;
 
     public AudioSource battleStart;
     public AudioSource bossFight1;
@@ -78,7 +80,32 @@ public class AudioHolder : MonoBehaviour
         }
     }
 
-    public void PlayBossFight(int index)
+    private AudioSource _currentBossMusic;
+    public void PlayBossSounds(AttackType type)
+    {
+        switch (type)
+        {
+            case AttackType.Reaper:
+                battleStart.PlayDelayed(0.3f);
+                reaperLaughter.Play();
+                PlayBossFight(1);
+                break;
+            case AttackType.Ice:
+                battleStart.PlayDelayed(0.3f);
+                golemLaugh.Play();
+                PlayBossFight(0);
+                break;
+            case AttackType.Wind:
+                battleStart.PlayDelayed(0.3f);
+                golemLaugh.Play();
+                PlayBossFight(2);
+                break;
+            default: print("no boss type set, no sounds will be played");
+                break;
+        }
+    }
+
+    private void PlayBossFight(int index)
     {
         switch (index)
         {
@@ -86,18 +113,25 @@ public class AudioHolder : MonoBehaviour
                 bossFight2.Stop();
                 bossFight2.volume = 1f;
                 bossFight2.PlayDelayed(3f);
+                _currentBossMusic = bossFight2;
                 break;
             case 1: 
                 bossFight1.Stop();
                 bossFight1.volume = 1f;
-                bossFight1.PlayDelayed(3f);
+                bossFight3.PlayDelayed(3f);
+                _currentBossMusic = bossFight3;
                 break;
             case 2: 
                 bossFight3.Stop();
                 bossFight3.volume = 1f;
-                bossFight3.PlayDelayed(3f);
+                bossFight3.PlayDelayed(2.3f);
+                _currentBossMusic = bossFight3;
                 break;
         }
-      
+    }
+
+    public void TurnOffBossMusic()
+    {
+        new AudioSourceFader(_currentBossMusic, 4f, 0f).StartFading();
     }
 }
