@@ -76,8 +76,8 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 24300002, guid: 55505d56f80983d4cb2bf9c2b2d2a7da, type: 2}
   m_audioClip: {fileID: 8300000, guid: 50b638827a55a924cbdcde67d0d53522, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.7
-  m_Pitch: 1
+  m_Volume: 0.15
+  m_Pitch: 0.7
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -585,8 +585,8 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 24300002, guid: 55505d56f80983d4cb2bf9c2b2d2a7da, type: 2}
   m_audioClip: {fileID: 8300000, guid: a94e090d7fa77a54784f577103864286, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
+  m_Volume: 0.15
+  m_Pitch: 0.7
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -712,8 +712,8 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 24300002, guid: 55505d56f80983d4cb2bf9c2b2d2a7da, type: 2}
   m_audioClip: {fileID: 8300000, guid: c2d3fb7bbd9ad4848a4ebdd77859b7ca, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
+  m_Volume: 0.15
+  m_Pitch: 0.7
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -2397,7 +2397,6 @@ MonoBehaviour:
   resurrection1: {fileID: 894899936}
   resurrection2: {fileID: 1614297416}
   resurrection3: {fileID: 2138402361}
-  resurrection4: {fileID: 0}
 --- !u!1 &4455582661386826067
 GameObject:
   m_ObjectHideFlags: 0

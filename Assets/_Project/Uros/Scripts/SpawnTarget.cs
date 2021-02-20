@@ -2,7 +2,7 @@
 
 public class SpawnTarget : MonoBehaviour
 {
-    [SerializeField] float timeTillSpawn = 4f;
+    [SerializeField] float timeTillSpawn = 2.8f;
     
     private Transform _spawnTransform;
     public bool isSpawning;
