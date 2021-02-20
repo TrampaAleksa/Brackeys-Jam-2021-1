@@ -148,20 +148,6 @@ MonoBehaviour:
   healingAmount: 5
   healPrefab: {fileID: 1175529831686281850, guid: 2d744808377ab11438841a2b395a89b0, type: 3}
   spawnHealEvery: 0.7
---- !u!114 &8329363096850667669
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6522283556672840975}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e5a7a69a2854313a3fa0c26661f7c6b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  type: 2
-  baseDamage: 10
 --- !u!82 &1044873234275635369
 AudioSource:
   m_ObjectHideFlags: 0
@@ -258,6 +244,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &8329363096850667669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6522283556672840975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e5a7a69a2854313a3fa0c26661f7c6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 2
+  baseDamage: 10
 --- !u!1001 &969268119278810744
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -334,6 +334,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6522283556658524637}
     m_Modifications:
+    - target: {fileID: 2915817860883152862, guid: 77e9e022b8dfb854494f6ebb1da45b9b, type: 3}
+      propertyPath: radiusInBattle
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2915817860883152862, guid: 77e9e022b8dfb854494f6ebb1da45b9b, type: 3}
+      propertyPath: radiusOutOfBattle
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2960019225610239380, guid: 77e9e022b8dfb854494f6ebb1da45b9b, type: 3}
       propertyPath: m_RootOrder
       value: 0

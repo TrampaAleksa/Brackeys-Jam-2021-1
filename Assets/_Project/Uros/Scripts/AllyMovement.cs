@@ -41,7 +41,8 @@ public class AllyMovement : MonoBehaviour
     private void RetreatMovement()
     {
         CalculatePath(player.transform);
-        ally.navMeshAgent.radius = retreatRadius;
+        ally.navMeshAgent.stoppingDistance = retreatRadius;
+        ally.navMeshAgent.radius = 1f;
         
         if (InAttackRange)
             transform.LookAt(player.transform);
@@ -50,7 +51,9 @@ public class AllyMovement : MonoBehaviour
     private void InBattleMovement()
     {
         CalculatePath(target.transform);
-        ally.navMeshAgent.radius = radiusInBattle;
+        ally.navMeshAgent.stoppingDistance = radiusInBattle;
+        ally.navMeshAgent.radius = 1f;
+
         
         if (InAttackRange)
             transform.LookAt(target.transform);
@@ -59,7 +62,8 @@ public class AllyMovement : MonoBehaviour
     private void OutOfCombatMovement()
     {
         CalculatePath(player.transform);
-        ally.navMeshAgent.radius = radiusOutOfBattle;
+        ally.navMeshAgent.stoppingDistance = radiusOutOfBattle;
+        ally.navMeshAgent.radius = 1.5f;
         
         if (InAttackRange)
             transform.LookAt(player.transform);
