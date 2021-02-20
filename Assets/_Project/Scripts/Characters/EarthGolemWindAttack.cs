@@ -30,11 +30,12 @@ public class EarthGolemWindAttack : Attack
 
     private void DamageAllAllies()
     {
-        foreach (var ally in _allyList.allies)
+        for (var index = 0; index < _allyList.allies.Count; index++)
         {
+            var ally = _allyList.allies[index];
             ally.hitDetector.HitByAttack(type, baseDamage);
         }
-        
+
         _timedAction.StartTimedAction(DamageAllAllies, intervalOfDamage);
     }
     
