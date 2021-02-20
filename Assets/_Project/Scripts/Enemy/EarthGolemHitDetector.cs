@@ -20,7 +20,6 @@ public class EarthGolemHitDetector : AttackHitDetector
         if (_health.currentHealth <= 0.001f)
         {
             AllyList.Instance.ExitAllyCombat();
-            AudioHolder.Instance.TurnOffBossMusic();
             AudioHolder.Instance.earthGolemDeath.Play();
             Instantiate(manaProjectile, transform.position, Quaternion.identity);
             Destroy(gameObject);

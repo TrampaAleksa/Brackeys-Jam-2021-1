@@ -30,6 +30,8 @@ public class AudioHolder : MonoBehaviour
     public AudioSource bossFight1;
     public AudioSource bossFight2;
     public AudioSource bossFight3;
+    public AudioSource backgroundSoundtrack;
+    public AudioSource backgroundSoundtrackRiver;
 
     public AudioSource randomAmbientSound1;
     public AudioSource randomAmbientSound2;
@@ -43,6 +45,11 @@ public class AudioHolder : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+    }
+
+    private void Start()
+    {
+        TurnOnBackgroundMusic();
     }
 
 
@@ -92,6 +99,7 @@ public class AudioHolder : MonoBehaviour
 
     public void PlayBossSounds(AttackType type)
     {
+        TurnOffBackgroundMusic();
         switch (type)
         {
             case AttackType.Reaper:
@@ -149,7 +157,21 @@ public class AudioHolder : MonoBehaviour
     public void TurnOffBossMusic()
     {
         new AudioSourceFader(_currentBossMusic, 4f, 0f).StartFading();
+        TurnOnBackgroundMusic();
     }
+
+    public void TurnOnBackgroundMusic()
+    {
+        new AudioSourceFader(backgroundSoundtrack, 4f, 1f).StartFading();
+        new AudioSourceFader(backgroundSoundtrackRiver, 4f, 0.4f).StartFading();
+    }
+    
+    public void TurnOffBackgroundMusic()
+    {
+        new AudioSourceFader(backgroundSoundtrack, 4f, 0f).StartFading();
+        new AudioSourceFader(backgroundSoundtrackRiver, 4f, 0f).StartFading();
+    }
+    
 
     public void PlayResurrectionSound()
     {
