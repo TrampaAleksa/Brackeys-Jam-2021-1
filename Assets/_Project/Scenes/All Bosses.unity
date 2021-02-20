@@ -2147,10 +2147,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Reaper
       objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: colllider
-      value: 
-      objectReference: {fileID: 1930868107}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 27525b923e9ebe544bb9a37146b8f8fb, type: 3}
 --- !u!4 &992520127 stripped
@@ -2212,7 +2208,7 @@ Transform:
   - {fileID: 1567447280}
   - {fileID: 427590614}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1058296036
 PrefabInstance:
@@ -4363,7 +4359,7 @@ Transform:
   - {fileID: 519981222}
   - {fileID: 1976487130}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1730264749
 PrefabInstance:
@@ -5311,7 +5307,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4455582661373602230, guid: e2e4deb25ebdc42449a8b13d37c55ce4, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4455582661373602230, guid: e2e4deb25ebdc42449a8b13d37c55ce4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5363,9 +5359,21 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 4458831065400660809, guid: 031a50598517f224baf891497a2393f8, type: 3}
+      propertyPath: necroRings.Array.data[0]
+      value: 
+      objectReference: {fileID: 3336075711755984397, guid: e6a4a4b06065f224680def6596a677b1, type: 3}
+    - target: {fileID: 4458831065400660809, guid: 031a50598517f224baf891497a2393f8, type: 3}
+      propertyPath: necroRings.Array.data[1]
+      value: 
+      objectReference: {fileID: 7497825078022567701, guid: 2d2079721b7476e4c83a6ea0e3c93d6e, type: 3}
+    - target: {fileID: 4458831065400660809, guid: 031a50598517f224baf891497a2393f8, type: 3}
+      propertyPath: necroRings.Array.data[2]
+      value: 
+      objectReference: {fileID: 2109537719795993968, guid: 36087fb9dfa1c024999e92c9cad57257, type: 3}
+    - target: {fileID: 4458831065400660809, guid: 031a50598517f224baf891497a2393f8, type: 3}
       propertyPath: necroRings.Array.data[3]
       value: 
-      objectReference: {fileID: 3857721846358920497, guid: 5a0fc816b1865704f87e0058cdfe6ad2, type: 3}
+      objectReference: {fileID: 1356298632400431053, guid: 3aa8424204b160c4dab40ce7c10e6bef, type: 3}
     - target: {fileID: 7277373593444967728, guid: 031a50598517f224baf891497a2393f8, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -5485,7 +5493,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5520938985687354547, guid: cc52ac6c50a531542a84f256e262f0d6, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 5520938985687354547, guid: cc52ac6c50a531542a84f256e262f0d6, type: 3}
       propertyPath: m_LocalPosition.x
