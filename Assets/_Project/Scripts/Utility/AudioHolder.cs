@@ -19,6 +19,7 @@ public class AudioHolder : MonoBehaviour
     public AudioSource iceGolemAttack;
     public AudioSource reaperAttack;
     public AudioSource tornadoSounds;
+    public AudioSource reaperLaughter;
 
     public AudioSource battleStart;
     public AudioSource bossFight1;
