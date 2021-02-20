@@ -394,6 +394,14 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 2960019225610239385, guid: 77e9e022b8dfb854494f6ebb1da45b9b, type: 3}
+      propertyPath: attackTimeOffset
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2960019225610239385, guid: 77e9e022b8dfb854494f6ebb1da45b9b, type: 3}
+      propertyPath: timeBetweenAttacks
+      value: 1.6
+      objectReference: {fileID: 0}
     - target: {fileID: 2960019225610239387, guid: 77e9e022b8dfb854494f6ebb1da45b9b, type: 3}
       propertyPath: maxHealth
       value: 120

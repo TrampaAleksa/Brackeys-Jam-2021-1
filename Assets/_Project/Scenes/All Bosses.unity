@@ -204,25 +204,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeTillSpawn: 4
   isSpawning: 0
---- !u!1 &111023572 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9010801352099434396, guid: 7c438aa013c75134bba32eef8a3c9f96, type: 3}
-  m_PrefabInstance: {fileID: 1620555586}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &111023573
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 111023572}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2998362ad758406ba7d7a5e9e3355ae1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeTillSpawn: 4
-  isSpawning: 0
 --- !u!1001 &122854973
 PrefabInstance:
   m_ObjectHideFlags: 0
