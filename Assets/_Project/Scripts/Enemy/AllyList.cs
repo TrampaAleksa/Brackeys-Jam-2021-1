@@ -70,25 +70,42 @@ public class AllyList : MonoBehaviour
         }
     }
 
+    public void SortByTypes(AttackType bossType)
+    {
+        switch (bossType)
+        {
+            case AttackType.Ice: SetWeights(4, 3, 1, 2);
+                break;
+            case AttackType.Spider: SetWeights(2, 4, 3, 1);
+                break;
+            case AttackType.Wind: SetWeights(4, 3, 1, 2);
+                break;
+            case AttackType.Reaper: SetWeights(1, 3, 1, 2);
+                break;
+        }
+        
+        allies = allies.OrderBy((ally) => ally.weight).ToList();
+    }
 
-    public void SortByTypes(int fireWeight, int iceWeight, int warriorWeight, int gnomeWeight)
+    private void SetWeights(int fireWeight, int iceWeight, int warriorWeight, int gnomeWeight)
     {
         foreach (var ally in allies)
         {
             switch (ally.attack.type)
             {
-                case AttackType.Fire: ally.weight = fireWeight;
+                case AttackType.Fire:
+                    ally.weight = fireWeight;
                     break;
-                case AttackType.Ice: ally.weight = iceWeight;
+                case AttackType.Ice:
+                    ally.weight = iceWeight;
                     break;
-                case AttackType.Warrior: ally.weight = warriorWeight;
+                case AttackType.Warrior:
+                    ally.weight = warriorWeight;
                     break;
-                case AttackType.Gnome: ally.weight = gnomeWeight;
+                case AttackType.Gnome:
+                    ally.weight = gnomeWeight;
                     break;
             }
         }
-
-        allies = allies.OrderBy((ally) => ally.weight).ToList();
-
     }
 }
