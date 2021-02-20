@@ -158,8 +158,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2915817860883152862, guid: 77e9e022b8dfb854494f6ebb1da45b9b, type: 3}
-      propertyPath: radiusOutOfBattle
+      propertyPath: radiusInBattle
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2915817860883152862, guid: 77e9e022b8dfb854494f6ebb1da45b9b, type: 3}
+      propertyPath: radiusOutOfBattle
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2960019225610239380, guid: 77e9e022b8dfb854494f6ebb1da45b9b, type: 3}
       propertyPath: m_RootOrder

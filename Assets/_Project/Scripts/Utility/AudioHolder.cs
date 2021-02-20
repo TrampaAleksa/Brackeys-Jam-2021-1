@@ -109,8 +109,8 @@ public class AudioHolder : MonoBehaviour
                 PlayBossFight(2);
                 break;
             case AttackType.Spider:
-                battleStart.PlayDelayed(0.3f);
-                golemLaugh.Play();
+                spiderBattleStart.PlayDelayed(0.5f);
+                spiderDeath.PlayDelayed(4.5f);
                 PlayBossFight(0);
                 break;
             default:
