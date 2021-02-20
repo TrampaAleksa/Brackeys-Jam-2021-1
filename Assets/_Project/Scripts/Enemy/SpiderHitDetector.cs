@@ -2,7 +2,7 @@
 public class SpiderHitDetector : AttackHitDetector
 {
     [SerializeField] GameObject manaProjectile;
-    [SerializeField] GameObject colllider;
+    [SerializeField] GameObject[] collliders;
 
     private float damageReduction = 0.2f;
     private Health _health;
@@ -26,9 +26,16 @@ public class SpiderHitDetector : AttackHitDetector
         {
             AudioHolder.Instance.spiderDeath.Play();
             AllyList.Instance.ExitAllyCombat();
-            colllider.SetActive(false);
+            DestroyColliders();
             Instantiate(manaProjectile, transform.position, Quaternion.identity);
             Destroy(gameObject);
+        }
+    }
+    private void DestroyColliders()
+    {
+        for (int i = 0; i < collliders.Length; i++)
+        {
+            Destroy(collliders[i]);
         }
     }
 }

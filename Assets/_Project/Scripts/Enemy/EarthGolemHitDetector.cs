@@ -4,6 +4,7 @@ using UnityEngine;
 public class EarthGolemHitDetector : AttackHitDetector
 {
     [SerializeField] GameObject manaProjectile;
+    [SerializeField] GameObject[] collliders;
 
     private Health _health;
 
@@ -21,8 +22,16 @@ public class EarthGolemHitDetector : AttackHitDetector
         {
             AllyList.Instance.ExitAllyCombat();
             AudioHolder.Instance.earthGolemDeath.Play();
+            DestroyColliders();
             Instantiate(manaProjectile, transform.position, Quaternion.identity);
             Destroy(gameObject);
+        }
+    }
+    private void DestroyColliders()
+    {
+        for (int i = 0; i < collliders.Length; i++)
+        {
+            Destroy(collliders[i]);
         }
     }
 }

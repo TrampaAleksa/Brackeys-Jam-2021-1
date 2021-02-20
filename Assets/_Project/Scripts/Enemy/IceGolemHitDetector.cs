@@ -7,7 +7,7 @@ using UnityEngine;
 public class IceGolemHitDetector : AttackHitDetector
 {
     [SerializeField] GameObject manaProjectile;
-    [SerializeField] GameObject colllider;
+    [SerializeField] GameObject[] collliders;
 
     private float damageReduction = 0.2f;
     private Health _health;
@@ -30,10 +30,18 @@ public class IceGolemHitDetector : AttackHitDetector
         if (_health.currentHealth <= 0.001f)
         {
             AllyList.Instance.ExitAllyCombat();
-            colllider.SetActive(false);
+
+            DestroyColliders();
             Instantiate(manaProjectile, transform.position, Quaternion.identity);
             AudioHolder.Instance.earthGolemDeath.Play();
             Destroy(gameObject);
+        }
+    }
+    private void DestroyColliders()
+    {
+        for(int i =0; i < collliders.Length; i++)
+        {
+            Destroy(collliders[i]);
         }
     }
 }
