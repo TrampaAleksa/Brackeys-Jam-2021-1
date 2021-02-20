@@ -16,8 +16,8 @@ GameObject:
   - component: {fileID: 7696892990781978825}
   - component: {fileID: 7696892990781978827}
   - component: {fileID: 7696892990781978826}
-  - component: {fileID: 7696892990781978824}
   - component: {fileID: 7696892990781978831}
+  - component: {fileID: 6709388876210483623}
   m_Layer: 0
   m_Name: Reaper
   m_TagString: Untagged
@@ -123,7 +123,7 @@ NavMeshAgent:
   m_Height: 2
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
+  m_ObstacleAvoidanceType: 0
 --- !u!114 &7696892990781978825
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -167,19 +167,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeBetweenAttacks: 5
---- !u!114 &7696892990781978824
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7696892990781978828}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c3f7b14273b43e882ff10606b58b7ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  manaProjectile: {fileID: 1328167427046194470, guid: fe10c3789b9c7d743b81b0c075f1ba30, type: 3}
 --- !u!114 &7696892990781978831
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -195,3 +182,15 @@ MonoBehaviour:
   type: 0
   baseDamage: 50
   cleaveConeObj: {fileID: 3901369411953064236, guid: 93e87c1cc8f07d143a4dcc26fbb3e315, type: 3}
+--- !u!114 &6709388876210483623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7696892990781978828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5089b4296fd741379226069acd8f6520, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

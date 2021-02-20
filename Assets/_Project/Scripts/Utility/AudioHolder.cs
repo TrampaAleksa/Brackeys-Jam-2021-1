@@ -23,6 +23,7 @@ public class AudioHolder : MonoBehaviour
     public AudioSource reaperLaughter;
     public AudioSource spiderDeath;
     public AudioSource spiderAttack;
+    public AudioSource reaperDeath;
 
     public AudioSource battleStart;
     public AudioSource spiderBattleStart;
@@ -95,7 +96,7 @@ public class AudioHolder : MonoBehaviour
         {
             case AttackType.Reaper:
                 battleStart.PlayDelayed(0.3f);
-                reaperLaughter.Play();
+                reaperLaughter.PlayDelayed(1.3f);
                 PlayBossFight(1);
                 break;
             case AttackType.Ice:

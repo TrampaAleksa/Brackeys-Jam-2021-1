@@ -1,10 +1,5 @@
-﻿using _Project.Scripts.Utility;
-using UnityEngine;
-
-public class EarthGolemHitDetector : AttackHitDetector
+﻿public class ReaperHitDetector : AttackHitDetector
 {
-    [SerializeField] GameObject manaProjectile;
-
     private Health _health;
 
     private void Awake()
@@ -21,8 +16,8 @@ public class EarthGolemHitDetector : AttackHitDetector
         {
             AllyList.Instance.ExitAllyCombat();
             AudioHolder.Instance.TurnOffBossMusic();
-            AudioHolder.Instance.earthGolemDeath.Play();
-            Instantiate(manaProjectile, transform.position, Quaternion.identity);
+            AudioHolder.Instance.reaperDeath.Play();
+            print("WON THE GAME");
             Destroy(gameObject);
         }
     }

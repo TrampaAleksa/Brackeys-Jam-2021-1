@@ -33,6 +33,7 @@ public class IceGolemHitDetector : AttackHitDetector
             colllider.SetActive(false);
             Instantiate(manaProjectile, transform.position, Quaternion.identity);
             AudioHolder.Instance.TurnOffBossMusic();
+            AudioHolder.Instance.earthGolemDeath.Play();
             Destroy(gameObject);
         }
     }

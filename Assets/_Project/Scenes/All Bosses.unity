@@ -1532,7 +1532,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 764076719}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 16.136215, y: 0.32, z: 7.8281116}
+  m_LocalPosition: {x: 16.136215, y: 0.32, z: 137.32811}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 905418113}
@@ -2139,18 +2139,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7696892990781978822, guid: 27525b923e9ebe544bb9a37146b8f8fb, type: 3}
-      propertyPath: m_ObstacleAvoidanceType
-      value: 0
+    - target: {fileID: 7696892990781978825, guid: 27525b923e9ebe544bb9a37146b8f8fb, type: 3}
+      propertyPath: currentHealth
+      value: 250
       objectReference: {fileID: 0}
-    - target: {fileID: 7696892990781978824, guid: 27525b923e9ebe544bb9a37146b8f8fb, type: 3}
-      propertyPath: colllider
-      value: 
-      objectReference: {fileID: 1930868107}
     - target: {fileID: 7696892990781978828, guid: 27525b923e9ebe544bb9a37146b8f8fb, type: 3}
       propertyPath: m_Name
       value: Reaper
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: colllider
+      value: 
+      objectReference: {fileID: 1930868107}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 27525b923e9ebe544bb9a37146b8f8fb, type: 3}
 --- !u!4 &992520127 stripped
@@ -3018,14 +3018,6 @@ PrefabInstance:
     - target: {fileID: 1713997132836999257, guid: f71ab95d9c3f66145b39f60475290336, type: 3}
       propertyPath: currentHealth
       value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 1713997132836999258, guid: f71ab95d9c3f66145b39f60475290336, type: 3}
-      propertyPath: m_Radius
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1713997132836999258, guid: f71ab95d9c3f66145b39f60475290336, type: 3}
-      propertyPath: m_ObstacleAvoidanceType
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1713997132836999261, guid: f71ab95d9c3f66145b39f60475290336, type: 3}
       propertyPath: m_RootOrder
@@ -4013,10 +4005,6 @@ PrefabInstance:
       propertyPath: colllider
       value: 
       objectReference: {fileID: 1930868107}
-    - target: {fileID: 6482713070247740378, guid: 09a6336d99f517847b2a7aa5fddab053, type: 3}
-      propertyPath: m_ObstacleAvoidanceType
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6482713070247740382, guid: 09a6336d99f517847b2a7aa5fddab053, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -4617,7 +4605,7 @@ GameObject:
   - component: {fileID: 1936027650}
   - component: {fileID: 1936027649}
   m_Layer: 0
-  m_Name: Reaper
+  m_Name: Reaper Trigger
   m_TagString: BattleArea
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4882,10 +4870,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1484538515}
     m_Modifications:
-    - target: {fileID: 7201636235834849160, guid: 19246bc44f95f31478cceeefeff3a5fa, type: 3}
-      propertyPath: m_ObstacleAvoidanceType
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7201636235834849164, guid: 19246bc44f95f31478cceeefeff3a5fa, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -5321,14 +5305,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 414033074, guid: e2e4deb25ebdc42449a8b13d37c55ce4, type: 3}
-      propertyPath: m_Pitch
-      value: 1.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 712238418, guid: e2e4deb25ebdc42449a8b13d37c55ce4, type: 3}
-      propertyPath: m_Volume
-      value: 0.25
-      objectReference: {fileID: 0}
     - target: {fileID: 4455582661373602224, guid: e2e4deb25ebdc42449a8b13d37c55ce4, type: 3}
       propertyPath: m_Name
       value: Audio Holder
