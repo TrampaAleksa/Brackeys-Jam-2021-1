@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using _Project.Scripts.Utility;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -79,6 +80,7 @@ public class AudioHolder : MonoBehaviour
         }
     }
 
+    private AudioSource _currentBossMusic;
     public void PlayBossSounds(AttackType type)
     {
         switch (type)
@@ -111,17 +113,25 @@ public class AudioHolder : MonoBehaviour
                 bossFight2.Stop();
                 bossFight2.volume = 1f;
                 bossFight2.PlayDelayed(3f);
+                _currentBossMusic = bossFight2;
                 break;
             case 1: 
                 bossFight1.Stop();
                 bossFight1.volume = 1f;
-                bossFight1.PlayDelayed(3f);
+                bossFight3.PlayDelayed(3f);
+                _currentBossMusic = bossFight3;
                 break;
             case 2: 
                 bossFight3.Stop();
                 bossFight3.volume = 1f;
-                bossFight3.PlayDelayed(3f);
+                bossFight3.PlayDelayed(2.3f);
+                _currentBossMusic = bossFight3;
                 break;
         }
+    }
+
+    public void TurnOffBossMusic()
+    {
+        new AudioSourceFader(_currentBossMusic, 4f, 0f).StartFading();
     }
 }
