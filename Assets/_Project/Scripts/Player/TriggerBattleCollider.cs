@@ -24,7 +24,7 @@ public class TriggerBattleCollider : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            gameObject.GetComponent<BoxCollider>().isTrigger = false;
+            //gameObject.GetComponent<BoxCollider>().isTrigger = false;
             canSpawn = false;
         }
     }
