@@ -1,6 +1,9 @@
-﻿public class ReaperHitDetector : AttackHitDetector
+﻿using UnityEngine;
+
+public class ReaperHitDetector : AttackHitDetector
 {
     private Health _health;
+    public GameObject gameOverPanel;
 
     private void Awake()
     {
@@ -17,6 +20,8 @@
             AllyList.Instance.ExitAllyCombat();
             AudioHolder.Instance.reaperDeath.Play();
             print("WON THE GAME");
+            
+            gameOverPanel.SetActive(true);
             Destroy(gameObject);
         }
     }
