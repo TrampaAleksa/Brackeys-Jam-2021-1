@@ -4883,7 +4883,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speedOfProjectile: 5
-  ammountOfMana: 70
+  ammountOfMana: 200
 --- !u!65 &-640457821487320907
 BoxCollider:
   m_ObjectHideFlags: 0
