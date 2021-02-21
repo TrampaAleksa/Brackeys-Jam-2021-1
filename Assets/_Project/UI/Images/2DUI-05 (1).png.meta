@@ -1,12 +1,63 @@
 fileFormatVersion: 2
 guid: e96815b700dd4f447bdb1439f0db0278
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -4714939522226003953
+    second: 2DUI-05 (1)_0
+  - first:
+      213: 5150656236325114403
+    second: 2DUI-05 (1)_1
+  - first:
+      213: -8699053729945110421
+    second: 2DUI-05 (1)_2
+  - first:
+      213: -474415651765194613
+    second: 2DUI-05 (1)_3
+  - first:
+      213: 2404168609127775783
+    second: 2DUI-05 (1)_4
+  - first:
+      213: -8940907056390814614
+    second: 2DUI-05 (1)_5
+  - first:
+      213: 7727517928679583906
+    second: 2DUI-05 (1)_6
+  - first:
+      213: 7336722631893310226
+    second: 2DUI-05 (1)_7
+  - first:
+      213: 1747174117639691550
+    second: 2DUI-05 (1)_8
+  - first:
+      213: 8300686192803045688
+    second: 2DUI-05 (1)_9
+  - first:
+      213: -5112919949354621766
+    second: 2DUI-05 (1)_10
+  - first:
+      213: 7876128943832582614
+    second: 2DUI-05 (1)_11
+  - first:
+      213: -7168792794072500732
+    second: 2DUI-05 (1)_12
+  - first:
+      213: -1976330771326295581
+    second: 2DUI-05 (1)_13
+  - first:
+      213: 2998474985374596619
+    second: 2DUI-05 (1)_14
+  - first:
+      213: -1325803986494018571
+    second: 2DUI-05 (1)_15
+  - first:
+      213: 3547486715234970055
+    second: 2DUI-05 (1)_16
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -35,13 +86,13 @@ TextureImporter:
     filterMode: -1
     aniso: 2
     mipBias: -100
-    wrapU: 0
-    wrapV: 0
+    wrapU: 1
+    wrapV: 1
     wrapW: 0
-  nPOTScale: 1
+  nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -50,9 +101,9 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 0
+  alphaIsTransparency: 1
   spriteTessellationDetail: -1
-  textureType: 0
+  textureType: 8
   textureShape: 1
   singleChannelComponent: 0
   maxTextureSizeSet: 0
@@ -123,11 +174,368 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: 2DUI-05 (1)_0
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 8576
+        width: 1994
+        height: 1995
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f00e4404c7b219eb0800000000000000
+      internalID: -4714939522226003953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DUI-05 (1)_1
+      rect:
+        serializedVersion: 2
+        x: 3274
+        y: 8539
+        width: 1999
+        height: 1995
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3221f4ebe8eca7740800000000000000
+      internalID: 5150656236325114403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DUI-05 (1)_2
+      rect:
+        serializedVersion: 2
+        x: 5847
+        y: 8539
+        width: 1994
+        height: 1995
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b68b590e8b0c64780800000000000000
+      internalID: -8699053729945110421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DUI-05 (1)_3
+      rect:
+        serializedVersion: 2
+        x: 8368
+        y: 8576
+        width: 1994
+        height: 1995
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8076a07a798a69f0800000000000000
+      internalID: -474415651765194613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DUI-05 (1)_4
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 7347
+        width: 9625
+        height: 1020
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72eb437bc925d5120800000000000000
+      internalID: 2404168609127775783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DUI-05 (1)_5
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 6602
+        width: 9625
+        height: 651
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a64ca0637648be380800000000000000
+      internalID: -8940907056390814614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DUI-05 (1)_6
+      rect:
+        serializedVersion: 2
+        x: 779
+        y: 6029
+        width: 8807
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a0b86e2d98ad3b60800000000000000
+      internalID: 7727517928679583906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DUI-05 (1)_7
+      rect:
+        serializedVersion: 2
+        x: 992
+        y: 5086
+        width: 8141
+        height: 859
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21bd191bc5641d560800000000000000
+      internalID: 7336722631893310226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DUI-05 (1)_8
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 4591
+        width: 8807
+        height: 438
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1d9ba26a953f3810800000000000000
+      internalID: 1747174117639691550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DUI-05 (1)_9
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 3440
+        width: 9625
+        height: 932
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 831e30a0d16f13370800000000000000
+      internalID: 8300686192803045688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DUI-05 (1)_10
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 2247
+        width: 9626
+        height: 646
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab4a5bd35624b09b0800000000000000
+      internalID: -5112919949354621766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DUI-05 (1)_11
+      rect:
+        serializedVersion: 2
+        x: 1211
+        y: 1570
+        width: 3297
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d9405e7b81ad4d60800000000000000
+      internalID: 7876128943832582614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DUI-05 (1)_12
+      rect:
+        serializedVersion: 2
+        x: 4565
+        y: 1529
+        width: 229
+        height: 229
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 406bde88fe4538c90800000000000000
+      internalID: -7168792794072500732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DUI-05 (1)_13
+      rect:
+        serializedVersion: 2
+        x: 4841
+        y: 1300
+        width: 672
+        height: 666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e12c6072a9a294e0800000000000000
+      internalID: -1976330771326295581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DUI-05 (1)_14
+      rect:
+        serializedVersion: 2
+        x: 5560
+        y: 1529
+        width: 229
+        height: 229
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0eb523dc19bc9920800000000000000
+      internalID: 2998474985374596619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DUI-05 (1)_15
+      rect:
+        serializedVersion: 2
+        x: 5847
+        y: 1570
+        width: 3297
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fb2a377c4cc99de0800000000000000
+      internalID: -1325803986494018571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DUI-05 (1)_16
+      rect:
+        serializedVersion: 2
+        x: 518
+        y: 29
+        width: 9626
+        height: 1020
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c96ff24f543b3130800000000000000
+      internalID: 3547486715234970055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 17cc3a54bbb655b4486534880efaa8c0
     internalID: 0
     vertices: []
     indices: 
