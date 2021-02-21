@@ -11,7 +11,7 @@ public class TriggerBattleCollider : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
-        {       
+        {
             AllyList.Instance.SortByTypes(bossType);
             AllyList.Instance.TriggerAllyCombat(boss);
             other.GetComponentInChildren<Heal>().inBatle = true;
