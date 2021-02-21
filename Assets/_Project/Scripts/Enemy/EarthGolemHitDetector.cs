@@ -23,6 +23,7 @@ public class EarthGolemHitDetector : AttackHitDetector
             AllyList.Instance.ExitAllyCombat();
             AudioHolder.Instance.earthGolemDeath.Play();
             DestroyColliders();
+            TriggerBattleCollider.canSpawn = true;
             Instantiate(manaProjectile, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }

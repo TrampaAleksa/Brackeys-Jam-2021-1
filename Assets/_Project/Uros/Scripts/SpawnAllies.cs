@@ -47,7 +47,7 @@ public class SpawnAllies : MonoBehaviour
         {
             Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
-            if (Physics.Raycast(ray, out hit))
+            if (Physics.Raycast(ray, out hit, Mathf.Infinity, LayerMask.GetMask("Spawner")))
             {
                 if (hit.collider.gameObject.CompareTag("SpawningAlly"))
                 {
@@ -64,18 +64,20 @@ public class SpawnAllies : MonoBehaviour
 
     public void TaskOnClick(int index)
     {
-        
+       // if (TriggerBattleCollider.canSpawn)
+       // {
             SpawnAlliesUi.Instance.ChangeButtosActivity();
-        if (manaPool.remainingMana >= manaPool.resurretionCost)
-        {
-            var spawnTarget = spawningObject.gameObject.GetComponent<SpawnTarget>();
-            if (spawnTarget.isSpawning) return;
+            if (manaPool.remainingMana >= manaPool.resurretionCost)
+            {
+                var spawnTarget = spawningObject.gameObject.GetComponent<SpawnTarget>();
+                if (spawnTarget.isSpawning) return;
 
-            spawnTarget.StartSpawning(allyTypes[index], necroRings[index]);
-            AudioHolder.Instance.PlayResurrectionSound();
-            manaPool.CastedResurretion();
-        }
-        else print("Not enough mana for resurrection");
+                spawnTarget.StartSpawning(allyTypes[index], necroRings[index]);
+                AudioHolder.Instance.PlayResurrectionSound();
+                manaPool.CastedResurretion();
+            }
+            else print("Not enough mana for resurrection");
+       // }
     }
 
     bool IsMouseOverUI()

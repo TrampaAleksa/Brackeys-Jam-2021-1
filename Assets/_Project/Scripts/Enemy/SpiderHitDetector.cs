@@ -27,6 +27,7 @@ public class SpiderHitDetector : AttackHitDetector
             AudioHolder.Instance.spiderDeath.Play();
             AllyList.Instance.ExitAllyCombat();
             DestroyColliders();
+            TriggerBattleCollider.canSpawn = true;
             Instantiate(manaProjectile, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }

@@ -7,6 +7,7 @@ public class TriggerBattleCollider : MonoBehaviour
 {
     public Transform boss;
     public AttackType bossType;
+    public static bool canSpawn = true;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -24,6 +25,7 @@ public class TriggerBattleCollider : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             gameObject.GetComponent<BoxCollider>().isTrigger = false;
+            canSpawn = false;
         }
     }
 }
