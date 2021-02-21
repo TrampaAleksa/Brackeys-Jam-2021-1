@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using _Project.Scripts.Utility;
 using NUnit.Framework;
 using UnityEngine;
@@ -47,8 +48,17 @@ public class AudioHolder : MonoBehaviour
 
     private void Awake()
     {
-        Instance = this;
-        DontDestroyOnLoad(gameObject);
+
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+       
         _sources = GetComponentsInChildren<AudioSource>();
     }
 

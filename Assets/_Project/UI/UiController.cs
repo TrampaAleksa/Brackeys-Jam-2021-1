@@ -17,13 +17,7 @@ public class UiController : MonoBehaviour
 
     public bool isInGame;
 
-    [ContextMenu("Stop time")]
-    public void StopTime()
-    {
-        Time.timeScale = 0;
-        AudioHolder.Instance.PauseAllSounds();
-    }
-
+    
     [ContextMenu("Unstop time")]
 
     public void UnstopTime()
@@ -36,12 +30,6 @@ public class UiController : MonoBehaviour
     {
         UnstopTime();
         pausePanel.SetActive(false);
-    }
-    
-    public void PauseGame()
-    {
-        UnstopTime();
-        pausePanel.SetActive(true);
     }
 
     [ContextMenu("toggle sound off")]
@@ -72,13 +60,5 @@ public class UiController : MonoBehaviour
     public void ExitToMainMenu()
     {
         SceneManager.LoadScene(0);
-    }
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            if (!isInGame) return;
-                PauseGame();
-        }
     }
 }
