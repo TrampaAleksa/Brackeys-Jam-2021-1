@@ -41,7 +41,7 @@ ModelImporter:
       name: Attack_warrior
       takeName: Take 001
       internalID: 0
-      firstFrame: 10
+      firstFrame: 0
       lastFrame: 25
       wrapMode: 0
       orientationOffsetY: 0
@@ -70,7 +70,7 @@ ModelImporter:
       name: Walk_warrior
       takeName: Take 001
       internalID: 0
-      firstFrame: 40
+      firstFrame: 34
       lastFrame: 54
       wrapMode: 0
       orientationOffsetY: 0
